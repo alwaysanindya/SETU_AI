@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+# Model weights and generated audio are large; they are downloaded or generated, never committed.
+models/
+content/audio/
+services/speech/.venv/
+__pycache__/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+apps/pwa/dev-dist/
