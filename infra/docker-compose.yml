@@ -1,0 +1,59 @@
+# One clinic PC (RTX 3060 12 GB or better). Start with:  docker compose -f infra/docker-compose.yml up -d
+# Phones on the clinic Wi-Fi open https://setu.local (see docs/deployment.md for HTTPS and DNS).
+name: setu
+
+services:
+  # Local LLM: Qwen 3.5 9B (Apache-2.0), 4-bit GGUF, served by llama.cpp with an OpenAI-compatible API.
+  # Put the GGUF file in ./models (see docs/deployment.md).
+  llm:
+    image: ghcr.io/ggml-org/llama.cpp:server-cuda
+    command: >
+      -m /models/${SETU_LLM_FILE:-qwen3.5-9b-instruct-q4_k_m.gguf}
+      --alias qwen3.5-9b-instruct
+      --host 0.0.0.0 --port 8081
+      -ngl 99 -c 8192 --parallel 2 --jinja
+    volumes: ["../models:/models:ro"]
+    deploy:
+      resources:
+        reservations:
+          devices: [{ driver: nvidia, count: all, capabilities: [gpu] }]
+    restart: unless-stopped
+
+  # Speech to text: AI4Bharat IndicConformer 600M (MIT).
+  speech:
+    build: ../services/speech
+    environment:
+      SETU_ASR: indicconformer
+    volumes: ["../models/hf:/models/hf"]
+    deploy:
+      resources:
+        reservations:
+          devices: [{ driver: nvidia, count: all, capabilities: [gpu] }]
+    restart: unless-stopped
+
+  # Interview API.
+  server:
+    build:
+      context: ..
+      dockerfile: apps/server/Dockerfile
+    environment:
+      SETU_LLM_URL: http://llm:8081/v1
+      SETU_SPEECH_URL: http://speech:8082
+    depends_on: [llm, speech]
+    restart: unless-stopped
+
+  # HTTPS front door: serves the phone app and the audio clips, forwards /api to the server.
+  # Phones need HTTPS for the microphone and for installing the app.
+  web:
+    image: caddy:2.10
+    ports: ["443:443", "80:80"]
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ../apps/pwa/dist:/srv/app:ro
+      - ../content/audio:/srv/audio:ro
+      - caddy-data:/data
+    depends_on: [server]
+    restart: unless-stopped
+
+volumes:
+  caddy-data:

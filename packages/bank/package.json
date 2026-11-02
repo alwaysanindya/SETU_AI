@@ -1,0 +1,16 @@
+{
+  "name": "@setu/bank",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Types and validation schema for the compiled question bank (the contract between the compiler, the engine, the server and the app).",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "zod": "4.6.7"
+  }
+}

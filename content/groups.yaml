@@ -1,0 +1,25 @@
+# Chief complaint pictures on the first screen, in display order.
+# The compiler builds groups from column A of the complaints sheet; this file sets the order
+# and the short label patients see. Complaint ids come from bank/report.md.
+order:
+  - pain
+  - fever
+  - cough-throat-problem
+  - difficulty-in-breathing
+  - vomiting
+  - diarrhoea
+  - acidity-indigestion
+  - dizziness
+  - fainting
+  - palpitation
+  - weakness
+  - swelling-tumour
+  - skin-rash
+  - boils
+  - ulcer
+  - injury
+  - bleeding-with-stool
+  - yellow-urine
+  - urine-problem
+  - gynae-problems
+  - other

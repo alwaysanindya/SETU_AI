@@ -1,0 +1,21 @@
+{
+  "name": "setu-ai",
+  "private": true,
+  "description": "Multilingual, voice-led symptom history PWA for primary care. Produces an ICD-coded complaint list and a one-page doctor summary.",
+  "license": "UNLICENSED",
+  "packageManager": "pnpm@10.28.0",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "bank:build": "pnpm --filter @setu/bank-compiler run build-bank",
+    "test": "pnpm -r run test",
+    "typecheck": "pnpm -r run typecheck",
+    "dev:server": "pnpm --filter @setu/server run dev",
+    "dev:pwa": "pnpm --filter @setu/pwa run dev"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "5.0.5"
+  }
+}

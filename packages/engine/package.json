@@ -1,0 +1,16 @@
+{
+  "name": "@setu/engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The interview rules engine: which question comes next, red flags, and the coded complaint list and doctor summary. Pure functions, no I/O, shared by the app and the server.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@setu/bank": "workspace:*"
+  }
+}

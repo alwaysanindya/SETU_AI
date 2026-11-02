@@ -1,0 +1,21 @@
+{
+  "name": "@setu/server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Clinic server: interview sessions, voice-answer interpretation (local LLM), speech proxy and doctor summaries.",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/main.ts",
+    "start": "tsx src/main.ts",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@fastify/cors": "11.4.0",
+    "@setu/bank": "workspace:*",
+    "@setu/engine": "workspace:*",
+    "fastify": "5.12.8",
+    "zod": "4.6.7",
+    "tsx": "4.23.15"
+  }
+}

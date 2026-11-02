@@ -1,0 +1,115 @@
+# DRAFT red-flag rules. NOT CLINICALLY APPROVED.
+#
+# When a rule matches, the interview pauses, the phone shows "Please show this to the staff now",
+# and the rule's message appears at the top of the doctor summary. The patient never sees the message.
+#
+# Each rule must be reviewed by the clinical safety lead, who sets `approved: true`.
+# Conditions use ids from bank/report.md:
+#   answer:        { complaint, question, optionIn: [option ids] }
+#   numberAtLeast: { complaint, question, value }
+#   patient:       { ageUnder, ageAtLeast, sex }
+#   all / any:     lists of conditions
+
+# Complaints that jump to the front of the queue when another complaint links to them.
+urgentComplaints:
+  - chest-pain
+  - difficulty-in-breathing
+
+rules:
+  - id: chest-pain-spreading
+    message: "Chest pain spreading to left arm or neck/jaw"
+    approved: false
+    when:
+      answer: { complaint: chest-pain, question: where-is-it-now, optionIn: [arm-l, neck-jaw] }
+
+  - id: chest-pain-with-sweating-breathlessness-or-collapse
+    message: "Chest pain with sweating, breathlessness or loss of consciousness"
+    approved: false
+    when:
+      answer:
+        complaint: chest-pain
+        question: any-associated-symptoms
+        optionIn: [sweating, unconsciousness, difficulty-in-breathing]
+
+  - id: chest-pain-on-exertion
+    message: "Chest pain brought on by exertion"
+    approved: false
+    when:
+      answer: { complaint: chest-pain, question: what-brings-it-on, optionIn: [exertion] }
+
+  - id: sudden-severe-headache
+    message: "Sudden-onset severe headache"
+    approved: false
+    when:
+      all:
+        - answer: { complaint: headache, question: how-did-the-pain-start, optionIn: [sudden] }
+        - answer: { complaint: headache, question: intensity, optionIn: [severe] }
+
+  - id: breathlessness-with-chest-pain
+    message: "Breathlessness with chest pain"
+    approved: false
+    when:
+      answer: { complaint: difficulty-in-breathing, question: any-chest-pain, optionIn: ["yes"] }
+
+  - id: breathlessness-at-night
+    message: "Breathlessness waking the patient at night"
+    approved: false
+    when:
+      answer: { complaint: difficulty-in-breathing, question: does-it-wake-you-up-at-night, optionIn: ["yes"] }
+
+  - id: fainting-with-loss-of-consciousness
+    message: "Fainting with loss of consciousness"
+    approved: false
+    when:
+      answer: { complaint: fainting, question: is-consciousness-lost, optionIn: ["yes"] }
+
+  - id: fainting-with-fits
+    message: "Fainting with fits"
+    approved: false
+    when:
+      answer: { complaint: fainting, question: any-associated-fits, optionIn: ["yes"] }
+
+  - id: vomiting-blood
+    message: "Vomiting blood"
+    approved: false
+    when:
+      answer: { complaint: vomiting, question: with-blood, optionIn: ["yes"] }
+
+  - id: diarrhoea-with-blood
+    message: "Diarrhoea with blood"
+    approved: false
+    when:
+      answer: { complaint: diarrhoea, question: with-blood, optionIn: ["yes"] }
+
+  - id: heavy-rectal-bleeding
+    message: "Heavy bleeding with stool"
+    approved: false
+    when:
+      answer: { complaint: bleeding-with-stool, question: amount, optionIn: [lot] }
+
+  - id: coughing-blood-with-fever
+    message: "Coughing blood"
+    approved: false
+    when:
+      answer: { complaint: fever, question: cough-with-bleeding, optionIn: ["yes"] }
+
+  - id: back-pain-neurological
+    message: "Back pain with leg weakness or loss of bladder control"
+    approved: false
+    when:
+      answer:
+        complaint: back-pain
+        question: any-associated-symptoms
+        optionIn: [weakness-of-legs, difficult-to-control-urine]
+
+  - id: sudden-scrotal-pain
+    message: "Sudden-onset scrotal pain"
+    approved: false
+    when:
+      answer: { complaint: scrotal-pain, question: how-did-the-pain-start, optionIn: [sudden] }
+
+  - id: injury-with-bleeding
+    message: "Injury with bleeding (sheet: send to nearest hospital after bandaging)"
+    approved: false
+    when:
+      answer: { complaint: injury, question: any-bleeding, optionIn: ["yes"] }

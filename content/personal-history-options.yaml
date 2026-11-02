@@ -1,0 +1,6 @@
+# Answer options for the choice questions in source/personal-history.xlsx.
+# The sheet lists the questions but not their options. Until clinicians supply them,
+# questions without options here are left out of the bank and listed in bank/report.md.
+#
+# Key = question text exactly as in the sheet. Each option: { id, label: { en }, noteTemplate }.
+options: {}
