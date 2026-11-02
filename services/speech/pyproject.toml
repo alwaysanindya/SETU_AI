@@ -1,0 +1,29 @@
+[project]
+name = "setu-speech"
+version = "0.1.0"
+description = "SETU speech service: speech-to-text for Bengali, Hindi and English (AI4Bharat IndicConformer, MIT)."
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi==0.121.3",
+  "uvicorn[standard]==0.38.0",
+  "python-multipart==0.0.20",
+  "numpy==2.3.5",
+]
+
+[project.optional-dependencies]
+# The real models. Installed in the Docker image; leave out for development with SETU_ASR=stub.
+asr = [
+  "torch==2.9.1",
+  "torchaudio==2.9.1",
+  "transformers==4.57.3",
+  "silero-vad==6.2.0",
+]
+# Only for generating question audio clips offline (scripts/generate_clips.py).
+tts = [
+  "parler-tts @ git+https://github.com/huggingface/parler-tts.git",
+  "soundfile==0.13.1",
+]
+dev = ["pytest==8.4.2", "httpx==0.28.1"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

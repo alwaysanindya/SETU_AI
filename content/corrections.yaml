@@ -1,0 +1,11 @@
+# Fixes for known problems in the source spreadsheets.
+# The compiler applies these and lists each one in bank/report.md so clinicians can fix the sheet itself.
+
+# "~Name" links in note templates that do not exactly match a complaint name.
+complaintAliases:
+  "Vomitting": "Vomiting"          # Abdomen Swelling > Vomiting? > Yes
+
+# Rename duplicated or mislabelled questions: complaint id -> sheet row -> new question text.
+questionRenames:
+  joint-pain:
+    "Duration#2": "How did the pain start?"   # second "Duration" row actually asks about onset

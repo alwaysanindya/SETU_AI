@@ -1,0 +1,182 @@
+{
+  "chooseLanguage": {
+    "en": "Choose your language",
+    "bn": "আপনার ভাষা বেছে নিন",
+    "hi": "अपनी भाषा चुनें"
+  },
+  "chooseVoice": {
+    "en": "Which voice do you want to hear?",
+    "bn": "কোন কণ্ঠস্বর শুনতে চান?",
+    "hi": "आप कौन सी आवाज़ सुनना चाहते हैं?"
+  },
+  "femaleVoice": {
+    "en": "Woman's voice",
+    "bn": "মহিলা কণ্ঠ",
+    "hi": "महिला की आवाज़"
+  },
+  "maleVoice": {
+    "en": "Man's voice",
+    "bn": "পুরুষ কণ্ঠ",
+    "hi": "पुरुष की आवाज़"
+  },
+  "listen": {
+    "en": "Listen",
+    "bn": "শুনুন",
+    "hi": "सुनें"
+  },
+  "next": {
+    "en": "Next",
+    "bn": "পরবর্তী",
+    "hi": "आगे"
+  },
+  "consentTitle": {
+    "en": "Before we start",
+    "bn": "শুরু করার আগে",
+    "hi": "शुरू करने से पहले"
+  },
+  "consentBody": {
+    "en": "I will ask you some questions about your health problem. Your answers go only to the doctor at this clinic. This is not a diagnosis; the doctor will see you.",
+    "bn": "আমি আপনার শারীরিক সমস্যা নিয়ে কিছু প্রশ্ন করব। আপনার উত্তর শুধু এই ক্লিনিকের ডাক্তারের কাছে যাবে। এটি রোগ নির্ণয় নয়; ডাক্তার আপনাকে দেখবেন।",
+    "hi": "मैं आपकी स्वास्थ्य समस्या के बारे में कुछ सवाल पूछूँगा। आपके जवाब सिर्फ़ इस क्लिनिक के डॉक्टर को जाएँगे। यह निदान नहीं है; डॉक्टर आपको देखेंगे।"
+  },
+  "agree": {
+    "en": "I agree",
+    "bn": "আমি রাজি",
+    "hi": "मैं सहमत हूँ"
+  },
+  "age": {
+    "en": "Your age (years)",
+    "bn": "আপনার বয়স (বছর)",
+    "hi": "आपकी उम्र (साल)"
+  },
+  "sex": {
+    "en": "You are",
+    "bn": "আপনি",
+    "hi": "आप"
+  },
+  "male": {
+    "en": "Male",
+    "bn": "পুরুষ",
+    "hi": "पुरुष"
+  },
+  "female": {
+    "en": "Female",
+    "bn": "মহিলা",
+    "hi": "महिला"
+  },
+  "other": {
+    "en": "Other",
+    "bn": "অন্যান্য",
+    "hi": "अन्य"
+  },
+  "whatProblem": {
+    "en": "What problem are you feeling today?",
+    "bn": "আজ আপনার কী সমস্যা হচ্ছে?",
+    "hi": "आज आपको क्या परेशानी है?"
+  },
+  "chooseAll": {
+    "en": "Choose all that apply",
+    "bn": "যা যা প্রযোজ্য সব বেছে নিন",
+    "hi": "जो लागू हों सब चुनें"
+  },
+  "back": {
+    "en": "Back",
+    "bn": "পিছনে",
+    "hi": "पीछे"
+  },
+  "speak": {
+    "en": "Tap and speak",
+    "bn": "চাপুন এবং বলুন",
+    "hi": "दबाएँ और बोलें"
+  },
+  "stop": {
+    "en": "Done speaking",
+    "bn": "বলা শেষ",
+    "hi": "बोलना पूरा"
+  },
+  "listening": {
+    "en": "Listening…",
+    "bn": "শুনছি…",
+    "hi": "सुन रहा हूँ…"
+  },
+  "didYouMean": {
+    "en": "Did you mean:",
+    "bn": "আপনি কি বলতে চেয়েছেন:",
+    "hi": "क्या आपका मतलब है:"
+  },
+  "yesCorrect": {
+    "en": "Yes, correct",
+    "bn": "হ্যাঁ, ঠিক",
+    "hi": "हाँ, सही"
+  },
+  "tryAgain": {
+    "en": "No, try again",
+    "bn": "না, আবার বলি",
+    "hi": "नहीं, फिर से"
+  },
+  "notUnderstood": {
+    "en": "Sorry, I did not understand. Please tap your answer.",
+    "bn": "দুঃখিত, বুঝতে পারিনি। উত্তরে চাপ দিন।",
+    "hi": "माफ़ कीजिए, समझ नहीं आया। कृपया जवाब पर दबाएँ।"
+  },
+  "dontKnow": {
+    "en": "I don't know",
+    "bn": "জানি না",
+    "hi": "पता नहीं"
+  },
+  "days": {
+    "en": "days",
+    "bn": "দিন",
+    "hi": "दिन"
+  },
+  "weeks": {
+    "en": "weeks",
+    "bn": "সপ্তাহ",
+    "hi": "हफ़्ते"
+  },
+  "months": {
+    "en": "months",
+    "bn": "মাস",
+    "hi": "महीने"
+  },
+  "years": {
+    "en": "years",
+    "bn": "বছর",
+    "hi": "साल"
+  },
+  "describe": {
+    "en": "Please describe",
+    "bn": "বিস্তারিত বলুন",
+    "hi": "कृपया बताएँ"
+  },
+  "showStaff": {
+    "en": "Please show this phone to the staff now.",
+    "bn": "এখনই ফোনটি কর্মীকে দেখান।",
+    "hi": "कृपया अभी यह फ़ोन स्टाफ़ को दिखाएँ।"
+  },
+  "iAmStaff": {
+    "en": "I am staff",
+    "bn": "আমি কর্মী",
+    "hi": "मैं स्टाफ़ हूँ"
+  },
+  "reviewTitle": {
+    "en": "Is this correct?",
+    "bn": "এটা কি ঠিক আছে?",
+    "hi": "क्या यह सही है?"
+  },
+  "confirm": {
+    "en": "Yes, send to doctor",
+    "bn": "হ্যাঁ, ডাক্তারকে পাঠান",
+    "hi": "हाँ, डॉक्टर को भेजें"
+  },
+  "doneTitle": {
+    "en": "Thank you. Please wait for the doctor.",
+    "bn": "ধন্যবাদ। দয়া করে ডাক্তারের জন্য অপেক্ষা করুন।",
+    "hi": "धन्यवाद। कृपया डॉक्टर का इंतज़ार करें।"
+  },
+  "error": {
+    "en": "Something went wrong. Please ask the staff.",
+    "bn": "কিছু সমস্যা হয়েছে। কর্মীকে বলুন।",
+    "hi": "कुछ गड़बड़ हुई। कृपया स्टाफ़ से कहें।"
+  }
+}

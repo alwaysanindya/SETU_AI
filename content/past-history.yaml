@@ -1,0 +1,58 @@
+# DRAFT past medical history questions. Written by the development team; needs clinician review.
+# Same shape as a compiled question: id, text, kind (single | multi | number | date | text | duration),
+# options (id, label, noteTemplate, detail, exclusive) and noteTemplate.
+id: past-history
+title: { en: "Past medical history" }
+questions:
+  - id: known-conditions
+    text: { en: "Has a doctor ever told you that you have any of these?" }
+    kind: multi
+    options:
+      - { id: diabetes,      label: { en: "Diabetes (sugar)" },        noteTemplate: "Known _" }
+      - { id: hypertension,  label: { en: "High blood pressure" },     noteTemplate: "Known _" }
+      - { id: heart-disease, label: { en: "Heart disease" },           noteTemplate: "Known _" }
+      - { id: asthma-copd,   label: { en: "Asthma or COPD" },          noteTemplate: "Known _" }
+      - { id: tuberculosis,  label: { en: "Tuberculosis (TB)" },       noteTemplate: "Past or current _" }
+      - { id: thyroid,       label: { en: "Thyroid problem" },         noteTemplate: "Known _" }
+      - { id: kidney,        label: { en: "Kidney disease" },          noteTemplate: "Known _" }
+      - { id: epilepsy,      label: { en: "Fits / epilepsy" },         noteTemplate: "Known _" }
+      - { id: other,         label: { en: "Other" },                   noteTemplate: "Other: _", detail: { kind: text } }
+      - { id: none,          label: { en: "None" },                    noteTemplate: "No known chronic illness", exclusive: true }
+  - id: daily-medicines
+    text: { en: "Do you take any medicine every day?" }
+    kind: single
+    options:
+      - { id: "yes", label: { en: "Yes" }, noteTemplate: "Regular medicines: _", detail: { kind: text, prompt: "Which medicines? Staff may check the packets." } }
+      - { id: "no",  label: { en: "No" },  noteTemplate: "No regular medicines" }
+      - { id: dont-know, label: { en: "I don't know" }, noteTemplate: "Regular medicines not known" }
+  - id: allergies
+    text: { en: "Are you allergic to any medicine or food?" }
+    kind: single
+    options:
+      - { id: "yes", label: { en: "Yes" }, noteTemplate: "Allergy: _", detail: { kind: text, prompt: "To what?" } }
+      - { id: "no",  label: { en: "No" },  noteTemplate: "No known allergies" }
+      - { id: dont-know, label: { en: "I don't know" }, noteTemplate: "Allergy status not known" }
+  - id: operations-admissions
+    text: { en: "Have you had any operation or hospital admission before?" }
+    kind: single
+    options:
+      - { id: "yes", label: { en: "Yes" }, noteTemplate: "Previous operation/admission: _", detail: { kind: text, prompt: "What and when?" } }
+      - { id: "no",  label: { en: "No" },  noteTemplate: "No previous operations or admissions" }
+  - id: family-history
+    text: { en: "Does anyone in your family have any of these?" }
+    kind: multi
+    options:
+      - { id: diabetes,      label: { en: "Diabetes (sugar)" },    noteTemplate: "Family history of _" }
+      - { id: hypertension,  label: { en: "High blood pressure" }, noteTemplate: "Family history of _" }
+      - { id: heart-disease, label: { en: "Heart disease" },       noteTemplate: "Family history of _" }
+      - { id: cancer,        label: { en: "Cancer" },              noteTemplate: "Family history of _" }
+      - { id: tuberculosis,  label: { en: "Tuberculosis (TB)" },   noteTemplate: "Family history of _" }
+      - { id: none,          label: { en: "None / don't know" },   noteTemplate: "No significant family history reported", exclusive: true }
+  - id: pregnant
+    text: { en: "Are you pregnant, or could you be pregnant?" }
+    kind: single
+    appliesTo: { sex: female }
+    options:
+      - { id: "yes",      label: { en: "Yes" },          noteTemplate: "Currently pregnant" }
+      - { id: "no",       label: { en: "No" },           noteTemplate: "Not pregnant" }
+      - { id: not-sure,   label: { en: "Not sure" },     noteTemplate: "Possibly pregnant (not sure)" }

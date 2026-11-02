@@ -1,0 +1,42 @@
+# DRAFT symptom-level codes for each complaint. NOT VERIFIED.
+#
+# - WHO ICD-10 (2019 edition), not the US ICD-10-CM. Check every code at https://icd.who.int/browse10/2019/en
+# - SNOMED CT codes are left empty until checked in the NRCeS SNOMED CT India browser.
+# - These codes describe what the patient REPORTED. The doctor summary labels them
+#   "patient-reported, not a diagnosis".
+# - A clinician sets `verified: true` after checking each line.
+complaints:
+  headache:                      { icd10Who: { code: R51,   display: "Headache" }, verified: false }
+  ear-pain:                      { icd10Who: { code: H92.0, display: "Otalgia" }, verified: false }
+  teeth-pain:                    { icd10Who: { code: K08.8, display: "Other specified disorders of teeth and supporting structures (toothache)" }, verified: false }
+  throat-pain:                   { icd10Who: { code: R07.0, display: "Pain in throat" }, verified: false }
+  back-pain:                     { icd10Who: { code: M54.9, display: "Dorsalgia, unspecified" }, verified: false }
+  joint-pain:                    { icd10Who: { code: M25.5, display: "Pain in joint" }, verified: false }
+  chest-pain:                    { icd10Who: { code: R07.4, display: "Chest pain, unspecified" }, verified: false }
+  abdominal-pain:                { icd10Who: { code: R10.4, display: "Other and unspecified abdominal pain" }, verified: false }
+  breast-pain:                   { icd10Who: { code: N64.4, display: "Mastodynia" }, verified: false }
+  scrotal-pain:                  { icd10Who: { code: N50.8, display: "Other specified disorders of male genital organs" }, verified: false }
+  perianal-pain:                 { icd10Who: { code: K62.8, display: "Other specified diseases of anus and rectum" }, verified: false }
+  throat-swelling:               { icd10Who: { code: R22.1, display: "Localized swelling, mass and lump, neck" }, verified: false }
+  abdomen-swelling:              { icd10Who: { code: R19.0, display: "Intra-abdominal and pelvic swelling, mass and lump" }, verified: false }
+  swelling-others:               { icd10Who: { code: R22.9, display: "Localized swelling, mass and lump, unspecified" }, verified: false }
+  difficulty-in-breathing:       { icd10Who: { code: R06.0, display: "Dyspnoea" }, verified: false }
+  fever:                         { icd10Who: { code: R50.9, display: "Fever, unspecified" }, verified: false }
+  diarrhoea:                     { icd10Who: { code: A09.9, display: "Gastroenteritis and colitis of unspecified origin" }, verified: false }
+  vomiting:                      { icd10Who: { code: R11,   display: "Nausea and vomiting" }, verified: false }
+  dizziness:                     { icd10Who: { code: R42,   display: "Dizziness and giddiness" }, verified: false }
+  acidity-indigestion:           { icd10Who: { code: K30,   display: "Dyspepsia" }, verified: false }
+  yellow-urine:                  { icd10Who: { code: R39.8, display: "Other and unspecified symptoms involving the urinary system" }, verified: false }
+  skin-rash:                     { icd10Who: { code: R21,   display: "Rash and other nonspecific skin eruption" }, verified: false }
+  bleeding-with-stool:           { icd10Who: { code: K62.5, display: "Haemorrhage of anus and rectum" }, verified: false }
+  period-problem:                { icd10Who: { code: N92.6, display: "Irregular menstruation, unspecified" }, verified: false }
+  private-parts-problem:         { icd10Who: { code: N94.9, display: "Unspecified condition associated with female genital organs and menstrual cycle" }, verified: false }
+  injury:                        { icd10Who: { code: T14.9, display: "Injury, unspecified" }, verified: false }
+  boils:                         { icd10Who: { code: L02.9, display: "Cutaneous abscess, furuncle and carbuncle, unspecified" }, verified: false }
+  ulcer:                         { icd10Who: { code: L98.4, display: "Chronic ulcer of skin, not elsewhere classified" }, verified: false }
+  palpitation:                   { icd10Who: { code: R00.2, display: "Palpitations" }, verified: false }
+  fainting:                      { icd10Who: { code: R55,   display: "Syncope and collapse" }, verified: false }
+  general-weakness:              { icd10Who: { code: R53,   display: "Malaise and fatigue" }, verified: false }
+  particular-weakness:           { icd10Who: { code: M62.8, display: "Other specified disorders of muscle" }, verified: false }
+  coughing-problem-in-throat:    { icd10Who: { code: R05,   display: "Cough" }, verified: false }
+  burning-or-frequency-of-urine: { icd10Who: { code: R30.0, display: "Dysuria" }, verified: false }

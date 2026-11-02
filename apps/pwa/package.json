@@ -1,0 +1,27 @@
+{
+  "name": "@setu/pwa",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The patient-facing phone app: pick language and voice, answer each question by voice or by tapping. Also the doctor's summary page.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run --passWithNoTests",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@setu/bank": "workspace:*",
+    "@setu/engine": "workspace:*",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.2.1",
+    "vite": "8.3.5",
+    "vite-plugin-pwa": "2.0.0"
+  }
+}
