@@ -6,7 +6,7 @@
  */
 import type { Bank, Lang } from "@setu/bank";
 import { useEffect, useState } from "react";
-import { api, type SessionView } from "./api";
+import { api, DEMO, type SessionView } from "./api";
 import { ui } from "./i18n";
 import { ComplaintScreen } from "./screens/Complaints";
 import { DoctorScreen } from "./screens/Doctor";
@@ -35,8 +35,17 @@ export function App() {
     window.addEventListener("hashchange", on);
     return () => window.removeEventListener("hashchange", on);
   }, []);
-  if (hash.startsWith("#/doctor")) return <DoctorScreen sessionId={hash.split("/")[2]} />;
-  return <PatientApp />;
+  return (
+    <>
+      {DEMO && (
+        <div className="demo-banner">
+          Demo only, not for patients. Answers stay on this device.{" "}
+          {hash.startsWith("#/doctor") ? <a href="#/">Patient app</a> : <a href="#/doctor">Doctor view</a>}
+        </div>
+      )}
+      {hash.startsWith("#/doctor") ? <DoctorScreen sessionId={hash.split("/")[2]} /> : <PatientApp />}
+    </>
+  );
 }
 
 function PatientApp() {

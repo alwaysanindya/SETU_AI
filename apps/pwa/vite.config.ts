@@ -3,10 +3,16 @@ import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
 
 // The app is installed from the clinic server over HTTPS (needed for the microphone and the service worker).
+// `VITE_SETU_DEMO=1` builds a self-contained demo (engine in the browser, no server, no service
+// worker) with relative paths, so it can be opened from any static link.
+const demo = process.env.VITE_SETU_DEMO === "1";
+
 export default defineConfig({
+  base: demo ? "./" : "/",
+  build: { target: "es2022", outDir: demo ? "dist-demo" : "dist" },
   plugins: [
     react(),
-    VitePWA({
+    !demo && VitePWA({
       registerType: "autoUpdate",
       includeAssets: ["icon.svg"],
       manifest: {
