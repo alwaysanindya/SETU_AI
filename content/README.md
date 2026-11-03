@@ -12,6 +12,7 @@ Code never contains clinical wording. To change a question, change the content a
 | `red-flags.yaml` | Clinicians, signed off by the clinical safety lead | Rules that pause the interview and alert staff |
 | `codes.yaml` | Clinicians | WHO ICD-10 and SNOMED CT codes for each complaint |
 | `corrections.yaml` | Developers, reviewed by clinicians | Fixes for sheet errors, so the sheet itself stays untouched until clinicians update it |
+| `translations.yaml` | Native speakers, reviewed by clinicians | Bengali and Hindi text for every question and answer (DRAFT, AI-assisted) |
 | `groups.yaml` | Clinicians | Which complaints appear under each chief complaint picture |
 | `bank/bank.json` | Generated, never edit by hand | The compiled bank used by the app |
 | `bank/report.md` | Generated | Every warning found while compiling, for clinicians to fix in the sheet |

@@ -1,36 +1,13 @@
-/** Calls to the clinic server (apps/server). One function per route; see apps/server/src/app.ts. */
+/**
+ * Calls to the clinic server (apps/server). One function per route; see apps/server/src/app.ts.
+ * A demo build (VITE_SETU_DEMO=1, `pnpm --filter @setu/pwa build:demo`) runs the same engine inside
+ * the browser instead (api-demo.ts), so the app can be tried from a plain link with no server.
+ */
 import type { Bank, Lang } from "@setu/bank";
-import type { Answer, DoctorSummary, InterviewState, Patient, Step } from "@setu/engine";
+import type { Answer, DoctorSummary, Patient } from "@setu/engine";
+import { ApiError, type Interpretation, type SessionListItem, type SessionView } from "./api-types";
 
-export interface SessionView {
-  id: string;
-  state: InterviewState;
-  step: Step;
-}
-
-export interface Interpretation {
-  answer?: Answer;
-  method: "dont_know" | "number" | "synonym" | "llm" | "none";
-}
-
-export interface SessionListItem {
-  id: string;
-  updatedAt: string;
-  patient: Patient;
-  complaints: string[];
-  redFlags: number;
-  confirmed: boolean;
-}
-
-export class ApiError extends Error {
-  constructor(
-    readonly status: number,
-    message: string,
-    readonly details?: unknown,
-  ) {
-    super(message);
-  }
-}
+export * from "./api-types";
 
 async function call<T>(method: string, url: string, body?: unknown): Promise<T> {
   const res = await fetch(url, {
@@ -43,7 +20,7 @@ async function call<T>(method: string, url: string, body?: unknown): Promise<T> 
   return json as T;
 }
 
-export const api = {
+const serverApi = {
   bank: () => call<Bank>("GET", "/api/bank"),
   start: (lang: Lang, patient: Patient) => call<SessionView>("POST", "/api/sessions", { lang, patient }),
   get: (id: string) => call<SessionView>("GET", `/api/sessions/${id}`),
@@ -62,3 +39,10 @@ export const api = {
     return res.json();
   },
 };
+
+export type Api = typeof serverApi;
+
+/** Set at build time. Vite drops the unused implementation from the bundle. */
+export const DEMO = import.meta.env.VITE_SETU_DEMO === "1";
+
+export const api: Api = DEMO ? (await import("./api-demo")).demoApi : serverApi;

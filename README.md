@@ -59,6 +59,13 @@ read by the phone's own voice until the reviewed audio clips are generated. To t
 run the speech service in stub mode (`services/speech/README.md`) and a local LLM
 (`docs/deployment.md`).
 
+## Demo build (no server)
+
+`pnpm --filter @setu/pwa build:demo` builds a self-contained version into `apps/pwa/dist-demo/`: the
+interview engine and question bank run in the browser, sessions stay on the device, and spoken answers
+use the browser's own speech recognition with the same rule-based matcher as the server (no LLM). It
+is for showing the app to people, never for patients: the browser may send audio to its vendor.
+
 ## Changing questions
 
 Edit the spreadsheet in `content/source/`, run `pnpm bank:build`, and read `content/bank/report.md`.

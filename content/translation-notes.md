@@ -1,0 +1,83 @@
+# Translation review notes
+
+Points the AI translators flagged while drafting `translations.yaml`. Native-speaker reviewers should check these first. Many point at unclear wording in the source sheet.
+
+- breast-pain where-did-it-start / where-is-it-now: the sheet's RUO/RLO/LUO/LLO notation is still unresolved. I kept the draft's reading: the first letter is the side of that breast and U/L means upper or lower, so RUO(R) becomes 'right breast, upper right side'. On the right breast the right side is the outer part, and on the left breast the left side is the outer part. A clinician should confirm this reading before release.
+- breast-pain c-r-2: the sheet labels it C(R), but it sits in the left-breast block. I kept 'middle of left breast', on the assumption that the sheet meant C(L).
+- difficulty-in-breathing varies-with-season (bn): the draft used ঋতু, which in Bengali also means menstruation. I changed it to আবহাওয়া বদলালে বাড়ে-কমে ('goes up and down when the weather changes').
+- back-pain front-of-leg-* / back-of-leg-* (hi): 'दाएँ पैर के आगे' reads as 'in front of the leg', meaning outside the body. I changed the labels to 'दाईं/बाईं टाँग का आगे/पीछे का हिस्सा' ('front or back part of the right or left leg'). In Bengali I changed them to 'পায়ের সামনের/পিছনের দিক' ('front or back side of the leg') for the same reason.
+- back-pain moved-to-the-front-*: I changed 'গেছে / गया' ('went') to 'ছড়িয়েছে / फैला' ('spread'), so the label clearly means the pain spread to the front.
+- back-pain where-did-it-start upper-* (hi): I replaced the bookish 'ऊपरी पीठ' with 'पीठ के ऊपर' ('upper part of the back').
+- perianal-pain (name and anal-region labels): মলদ্বার / मलद्वार are bookish words. I replaced them with the everyday terms পায়খানার রাস্তা and पाखाने की जगह. For the same reason, 'शौच करते समय' became 'पाखाना करते समय' ('while passing stool').
+- intensity moderate (hi): I replaced the bookish 'मध्यम' with 'बीच का' ('in between') in all three complaints.
+- vomiting constipation (bn): I replaced the bookish কোষ্ঠকাঠিন্য with the colloquial পায়খানা কষা (hard stool).
+- vomiting nature some-days (hi): I changed 'कुछ दिन' to 'किसी-किसी दिन' ('on some days'), because 'कुछ दिन' can be heard as 'for a few days'.
+- groups skin-rash (hi): त्वचा → चमड़ी. groups bleeding-with-stool (hi): मल के साथ खून → पाखाने में खून. groups swelling-tumour (bn): টিউমার → গাঁট (lump), to match the Hindi गाँठ and avoid a word that may frighten patients.
+- past-history known-conditions / family-history (bn): এর মধ্যে → এগুলোর মধ্যে ('among these'). daily-medicines (hi): लेते → खाते (more colloquial).
+- breast-pain relieved-by (bn): one option is 'period', which is not something the patient does. So I made the question ask about both what happens and what she does: কী হলে বা কী করলে ব্যথা কমে?
+- groups ulcer: still ambiguous. I kept ঘা / घाव (sore or wound). If the sheet meant a stomach ulcer, change it to পেটের ঘা / पेट का अल्सर.
+- detailPrompt strings are not in the output schema, so they remain untranslated.
+- chest-pain/nature/dull: hi 'हल्का भारी दर्द' used हल्का (= mild), which confuses it with intensity; changed to 'भारी-भारी, मंद दर्द'. bn changed to 'ভার ভার, চাপা ব্যথা'.
+- chest-pain/nature/sharp: bn 'তীক্ষ্ণ' is bookish; now 'সূঁচ ফোটার মতো'. hi shortened to 'चुभने जैसा'.
+- chest-pain/nature/constant: this option describes timing, not what the pain feels like (sheet mix-up); kept as 'always there'.
+- chest-pain/intensity, ear-pain/intensity: bn 'ব্যথা কতটা বেশি?' assumed the pain was strong; changed to 'ব্যথাটা কতটা জোরে হয়?'.
+- chest-pain/what-brings-it-on, relieved-by; ear-pain/what-brings-it-on, relieved-by; palpitation/what-brings-it-on: hi 'किस वजह से / किससे' changed to the more natural spoken 'क्या करने पर / क्या करने से'.
+- chest-pain/any-associated-symptoms: two 'Others' options (others, others-2) look like a sheet duplicate; both kept as অন্য কিছু / कुछ और.
+- throat-swelling/constipation: bn 'কোষ্ঠকাঠিন্য' is bookish; replaced with the everyday 'পায়খানা কষা হয়'.
+- throat-swelling/where-is-it/back-of-mouth: now 'মুখের ভিতরে পিছনের দিকে' / 'मुँह के अंदर पीछे की ओर' so it reads more clearly.
+- throat-swelling/period-problem: this complaint also covers men, so the app should show it only to women. Translation not changed.
+- throat-swelling/any-other-symptom: 'Difficulty in work/movement' seems copied from the general swelling template; translated as written.
+- private-parts-problem/no-of-pregnancies: added 'counting miscarriages' (বাচ্চা নষ্ট হয়ে যাওয়া সহ / गर्भ गिरने को भी मिलाकर), because a village patient would otherwise count only live births. bn now uses the everyday 'পেটে বাচ্চা এসেছে'.
+- private-parts-problem/any-discharge: the medical words 'যোনিপথ' / 'योनि' and 'স্রাব' are replaced with the plainer 'গোপনাঙ্গ দিয়ে সাদা জল' / 'गुप्तांग से सफ़ेद पानी'.
+- private-parts-problem/pain: 'Pain?' on its own was vague; it now asks about pain in the private parts or lower belly. The detailPrompt still asks for the exact location.
+- private-parts-problem/any-other-problem: duplicate 'None' options (none, none-2) look like a sheet error; both kept.
+- private-parts-problem: the questions (LMP, pregnancies, contraception in feminine hi 'अपनाती') assume a female patient. This complaint name could also be picked by men.
+- ear-pain/nature: the options are about timing (all the time / comes and goes), so the question now asks 'Is it there all the time or does it come and go?' and no longer asks how the pain is.
+- throat-swelling/painful-or-not, swelling-others/painful-or-not: hi changed to 'क्या सूजन वाली जगह पर दर्द है?'.
+- palpitation/fainting, fall: read as fainting or falling during the palpitations.
+- joint-pain finger options (index/middle/ring, R/L/B): the bookish words তর্জনী/মধ্যমা/অনামিকা and तर्जनी/अनामिका were replaced with everyday words. They now read 'finger next to the thumb' (বুড়ো আঙুলের পাশের আঙুল / अंगूठे के पास वाली उंगली), 'middle finger' (মাঝের আঙুল) and 'ring finger' (আংটির আঙুল / अंगूठी वाली उंगली). The Hindi 'both hands' labels now use plurals (उंगलियाँ).
+- joint-pain ankle-r/l/b (bn): গোড়ালি alone usually means the heel in Bengali. It is now গোড়ালির গাঁট (the ankle joint).
+- joint-pain hip-r/l/b (bn): 'ডান দিকের কোমর' can be heard as lower-back pain. It is now কোমরের জোড় (hip joint), but it may still be confused with the back. A body-diagram picture would help.
+- joint-pain/teeth-pain intensity moderate (hi): 'मध्यम' is bookish. It is now 'न कम, न ज़्यादा' (neither low nor high).
+- joint-pain inability-to-move: the draft Hindi 'हिला नहीं पा रहे' had no subject and read like an unfinished phrase. It is now 'हिला नहीं पाते' / 'নাড়াতে পারি না' (I can't move it).
+- joint-pain where-did-it-start/where-is-it-now: the sheet has no 'both' (B) option for the toes, though every other joint has one. All options were kept exactly as given.
+- teeth-pain/where-is-it-now 'other': in this question it means 'the pain moved somewhere else'. It was kept as অন্য কিছু / कुछ और because the rules require that; 'অন্য জায়গায় / किसी और जगह' would be clearer.
+- period-problem regular/varies: the draft 'প্রতিবার একই দিন' could be heard as 'on the same date'. It is now 'প্রতিবার সমান দিন' (the same number of days each time). Hindi 'घटता-बढ़ता है' is now 'कम-ज़्यादा होता है', which is more natural to say.
+- period-problem/interval-between-periods: the question was simplified to 'How many days until your period comes again?' (মাসিক কতদিন পরপর হয়? / माहवारी कितने दिन बाद दोबारा आती है?).
+- period-problem/flow normal and general-weakness/appetite normal: স্বাভাবিক/सामान्य were replaced with the spoken ঠিকঠাক/ঠিক আছে and ठीक-ठाक/ठीक है.
+- period-problem/no-of-pregnancies: a clinical fix. A pregnancy count must include miscarriages and abortions, so a short clause now says so (বাচ্চা নষ্ট হয়ে যাওয়া সহ / बच्चा गिर जाने वाली बार भी गिनें). Hindi also adds the plain word पेट से.
+- period-problem/age-of-onset started-at: the draft label 'এই বয়সে শুরু হয়েছে' (started at this age) makes no sense without a number. It is now 'শুরু হয়েছে (বয়স বলুন)' / 'शुरू हो गई (उम्र बताएँ)', which asks the patient to say the age.
+- period-problem/contraception-practice (hi): अपनाती हैं was changed to the more common इस्तेमाल करती हैं.
+- ulcer/edges and boils/colour (hi): the bookish त्वचा was replaced with चमड़ी. boils normal skin colour is now 'like the rest of the skin' (বাকি চামড়ার মতো / बाकी चमड़ी जैसा) instead of 'normal'.
+- ulcer/surface, edges, size and boils/colour-of-skin-over-the-boil: these are things a health worker checks by looking, not things a patient can easily report. Consider showing them only to the health worker.
+- Detail prompts ('describe', '# days', '# to # days', and the pain-type list Throbbing/Dull/Continuous) were not translated, because the schema has no field for them. They will need translating if the app reads them aloud.
+- Review: every item, question and option id was checked against tx-batch-4.json. None are missing or extra, and all ids are unchanged.
+- abdominal-pain / where-did-it-start + where-is-it-now / middle-r, middle-c, middle-l: 'মাঝে ডান দিকে' and 'একদম মাঝখানে' do not tell a patient which row of the belly is meant. Changed them to use the navel as the landmark: নাভির ডান পাশে / নাভির কাছে / নাভির বাম পাশে and नाभि के दायीं तरफ़ / नाभि के पास / नाभि के बायीं तरफ़. Left and right were checked and are correct.
+- abdominal-pain + throat-pain / intensity / moderate: Hindi 'मध्यम' is bookish, so it is now 'बीच का'. The Bengali question 'ব্যথাটা কতটা বেশি?' was awkward, so it is now 'ব্যথাটা কতটা জোরে হচ্ছে?'.
+- abdominal-pain / any-associated-symptoms / constipation, and acidity-indigestion + bleeding-with-stool / constipation: 'কোষ্ঠকাঠিন্য' is a bookish word that many village patients do not know. Replaced it with the everyday 'পায়খানা কষা' (label) and 'পায়খানা কি কষা বা শক্ত হয়, পরিষ্কার হয় না?' (question).
+- fever / how-much / nil: unclear on the sheet. It most likely means no fever at the moment. 'কিছু না / कुछ नहीं' did not make sense as an answer to 'how high does the fever go', so it is now 'এখন জ্বর নেই / अभी बुखार नहीं'. Please confirm with the sheet's author.
+- fever / pain / if-yes-write-location: this is a clinician instruction, not an answer, and it overlaps with 'yes'. I kept it as 'হ্যাঁ, কোথায় বলুন / हाँ, जगह बताइए'. Consider merging it into 'yes' with a location detail prompt.
+- fever / burning-frequency-in-urine: Yes/No is mixed with Others/None on the sheet. All four options are kept as given.
+- throat-pain / where-is-it-now / other: this question asks where the pain is now, so 'Other' here means another place. Translated as 'অন্য জায়গায় / कहीं और' instead of the default 'অন্য কিছু / कुछ और'.
+- acidity-indigestion / h-o-jaundice: added the colloquial Bengali word 'ন্যাবা' next to 'জন্ডিস' so more rural patients understand it.
+- personal-history / gender-specific-breast-lump-or-swelling: Bengali 'গাঁট' is not the usual word for a breast lump in West Bengal. Changed it to 'গুটি, চাকা বা ফোলা'.
+- personal-history / diet-and-exercise-do-you-exercise-regularly: Hindi 'रोज़' means 'daily', which is narrower than 'regularly'. Changed it to 'नियम से'.
+- bleeding-with-stool / amount / lot: Hindi 'ज़्यादा' alone is vague, so it is now 'बहुत सारा'.
+- personal-history / gender-specific-other-issues: the topic is unclear on the sheet. I kept the reading 'other period or women's health problems'.
+- abdominal-pain / any-associated-symptoms / diarrohoea: the id has a spelling mistake. I kept it exactly as given.
+- abdomen-swelling/fluctuates-in-size/increase-on-coughing-straining: FIXED. In the Bengali draft, 'চাপ দিলে' meant 'when pressed', which is a different clinical sign. Changed to 'কোঁত দিলে' (straining).
+- abdomen-swelling/general-abdominal-pain: FIXED. The draft said 'pain in general/usually', which is vague. Now it asks about belly pain apart from the swelling: 'ফোলা ছাড়াও কি পেটে ব্যথা হয়?' / 'सूजन के अलावा क्या पेट में दर्द होता है?'
+- abdomen-swelling/yellow-colour-in-urine: FIXED. Urine is normally yellow, so the question now asks whether it is MORE yellow than usual (বেশি হলুদ / ज़्यादा पीला).
+- abdomen-swelling/bowel-habit: Hindi 'शौच (टट्टी)' changed to 'टट्टी (पखाना)', which is more spoken. Bengali constipation label shortened to 'কষা পায়খানা'.
+- abdomen-swelling/any-change-in-colour-of-skin: Hindi 'त्वचा' changed to the spoken 'चमड़ी'.
+- Normal labels (abdomen-swelling/appetite, burning-or-frequency-of-urine/colour-of-urine, yellow-urine/colour-of-stool): bookish 'স্বাভাবিক/सामान्य' replaced with 'ঠিক আছে/ठीक है' or 'আগের মতোই/पहले जैसा'.
+- headache/intensity and scrotal-pain/intensity/moderate: Hindi 'मध्यम' is bookish; changed to 'बीच का'.
+- headache/what-brings-it-on: light and noise labels changed to the 'by/with' form (চড়া আলোয়, তেজ় রোশনী সে) so they read as triggers, matching 'চোট লাগলে'.
+- dizziness/relation-with-position: Hindi 'किस हालत में' was awkward, so both languages now ask 'when is the dizziness worse?' (কখন মাথা বেশি ঘোরে? / चक्कर कब ज़्यादा आते हैं?). The position options give the context.
+- dizziness/h-o-fall: Hindi reworded to the more natural 'क्या चक्कर आने से आप कभी गिरे हैं?'. Note that 'H/O Fall' in the English does not say the fall was caused by dizziness.
+- burning-or-frequency-of-urine/nature-of-burning/all-through-passing-urine: wording made more natural: 'প্রস্রাবের পুরো সময়' / 'पेशाब करते पूरे समय'.
+- burning-or-frequency-of-urine/how-is-the-stream/weak: Bengali 'দুর্বল' changed to the plainer 'জোর কম'.
+- diarrhoea/stool-type/ill-formed: 'আধা পাতলা/आधी पतली' (half-watery) was too close to 'soft'. 'Ill-formed' means stool that does not hold its shape, so it is now 'ভাঙা ভাঙা' / 'बिखरी-बिखरी'.
+- diarrhoea/relation-with-food: Hindi example clause fixed ('जैसे खाना खाते ही दस्त लगना'). Bengali made more spoken ('খেলেই পায়খানা পায়').
+- skin-rash/surface/smooth: Bengali 'মসৃণ' is bookish; changed to 'সমান, মোলায়েম'. The Hindi question now names the rash instead of the vague 'ऊपर से'.
+- UNRESOLVED (sheet errors, kept from the draft): dizziness/relation-with-position/none-others merges None and Others into one button. burning-or-frequency-of-urine/is-there-any-fever has a single option that merges Yes/No; it should be split into yes and no, with the fever questions triggered on yes. burning-or-frequency-of-urine/how-is-the-stream has stray Yes/No options. scrotal-pain/any-associated-symptoms has a duplicate Others (others, others-2). skin-rash/size option is a staff instruction that needs a number input. abdomen-swelling/change-in-weight Yes/No loses the direction of the weight change.
