@@ -5,6 +5,7 @@
  * The doctor's page is at #/doctor.
  */
 import type { Bank, Lang } from "@setu/bank";
+import { findQuestion } from "@setu/engine";
 import { useEffect, useState } from "react";
 import { api, DEMO, type SessionView } from "./api";
 import { ui } from "./i18n";
@@ -55,6 +56,7 @@ function PatientApp() {
   const [voice, setVoice] = useState<Voice>("female");
   const [session, setSession] = useState<SessionView>();
   const [error, setError] = useState<string>();
+  const [editing, setEditing] = useState<{ scope: string; questionId: string }>();
 
   useEffect(() => {
     api.bank().then(setBank, () => setError("bank"));
@@ -81,10 +83,20 @@ function PatientApp() {
   else {
     const ctx: Ctx = { bank, lang, voice, session, update };
     const step = session.step;
-    if (step.type === "red_flag") screen = <RedFlagScreen ctx={ctx} rules={step.rules} />;
+    if (editing && step.type !== "red_flag") {
+      const question = findQuestion(bank, editing.scope, editing.questionId);
+      screen = (
+        <QuestionScreen
+          key={`edit/${editing.scope}/${editing.questionId}`}
+          ctx={ctx}
+          step={{ type: "question", scope: editing.scope, question }}
+          onCancel={() => setEditing(undefined)}
+        />
+      );
+    } else if (step.type === "red_flag") screen = <RedFlagScreen ctx={ctx} rules={step.rules} />;
     else if (step.type === "choose_complaint") screen = <ComplaintScreen ctx={ctx} />;
     else if (step.type === "question") screen = <QuestionScreen key={`${step.scope}/${step.question.id}`} ctx={ctx} step={step} />;
-    else if (step.type === "review") screen = <ReviewScreen ctx={ctx} />;
+    else if (step.type === "review") screen = <ReviewScreen ctx={ctx} onEdit={(scope, questionId) => setEditing({ scope, questionId })} />;
     else screen = <DoneScreen ctx={ctx} />;
   }
 

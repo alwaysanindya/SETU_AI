@@ -1,0 +1,4594 @@
+# DRAFT Bengali (bn) and Hindi (hi) text for the questions and answers, matched by id.
+# Written with AI help (translated, then reviewed by a second AI pass). NOT yet checked by native
+# speakers or clinicians: every entry must be reviewed before use with patients.
+# Missing entries fall back to English. Ids are listed at the end of bank/report.md.
+groups:
+  pain:
+    bn: ব্যথা
+    hi: दर्द
+  fever:
+    bn: জ্বর
+    hi: बुखार
+  cough-throat-problem:
+    bn: কাশি / গলার সমস্যা
+    hi: खाँसी / गले की परेशानी
+  difficulty-in-breathing:
+    bn: শ্বাসকষ্ট
+    hi: साँस लेने में तकलीफ़
+  vomiting:
+    bn: বমি
+    hi: उल्टी
+  diarrhoea:
+    bn: পাতলা পায়খানা
+    hi: दस्त
+  acidity-indigestion:
+    bn: অম্বল / বদহজম
+    hi: एसिडिटी / बदहज़मी
+  dizziness:
+    bn: মাথা ঘোরা
+    hi: चक्कर आना
+  fainting:
+    bn: অজ্ঞান হয়ে যাওয়া
+    hi: बेहोशी
+  palpitation:
+    bn: বুক ধড়ফড় করা
+    hi: दिल की धड़कन तेज़ होना
+  weakness:
+    bn: দুর্বলতা
+    hi: कमज़ोरी
+  swelling-tumour:
+    bn: ফোলা / গাঁট
+    hi: सूजन / गाँठ
+  skin-rash:
+    bn: চামড়ায় ফুসকুড়ি
+    hi: चमड़ी पर दाने
+  boils:
+    bn: ফোঁড়া
+    hi: फोड़ा
+  ulcer:
+    bn: ঘা
+    hi: घाव
+  injury:
+    bn: চোট
+    hi: चोट
+  bleeding-with-stool:
+    bn: পায়খানার সাথে রক্ত
+    hi: पाखाने में खून
+  yellow-urine:
+    bn: হলুদ প্রস্রাব
+    hi: पीला पेशाब
+  urine-problem:
+    bn: প্রস্রাবের সমস্যা
+    hi: पेशाब की परेशानी
+  gynae-problems:
+    bn: মেয়েলি সমস্যা
+    hi: महिलाओं वाली परेशानी
+  other:
+    bn: অন্য কিছু
+    hi: कुछ और
+complaints:
+  breast-pain:
+    name:
+      bn: স্তনে ব্যথা
+      hi: स्तन में दर्द
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      where-did-it-start:
+        text:
+          bn: ব্যথাটা প্রথমে কোথায় শুরু হয়েছিল?
+          hi: दर्द सबसे पहले कहाँ शुरू हुआ था?
+        options:
+          ruo-r:
+            bn: ডান স্তন, উপরে ডানদিকে
+            hi: दायाँ स्तन, ऊपर दाईं ओर
+          rlo-r:
+            bn: ডান স্তন, নিচে ডানদিকে
+            hi: दायाँ स्तन, नीचे दाईं ओर
+          luo-r:
+            bn: ডান স্তন, উপরে বামদিকে
+            hi: दायाँ स्तन, ऊपर बाईं ओर
+          llo-r:
+            bn: ডান স্তন, নিচে বামদিকে
+            hi: दायाँ स्तन, नीचे बाईं ओर
+          c-r:
+            bn: ডান স্তনের মাঝখানে
+            hi: दाएँ स्तन के बीच में
+          ruo-l:
+            bn: বাম স্তন, উপরে ডানদিকে
+            hi: बायाँ स्तन, ऊपर दाईं ओर
+          rlo-l:
+            bn: বাম স্তন, নিচে ডানদিকে
+            hi: बायाँ स्तन, नीचे दाईं ओर
+          luo-l:
+            bn: বাম স্তন, উপরে বামদিকে
+            hi: बायाँ स्तन, ऊपर बाईं ओर
+          llo-l:
+            bn: বাম স্তন, নিচে বামদিকে
+            hi: बायाँ स्तन, नीचे बाईं ओर
+          c-r-2:
+            bn: বাম স্তনের মাঝখানে
+            hi: बाएँ स्तन के बीच में
+          all-over:
+            bn: সব জায়গায়
+            hi: हर जगह
+      where-is-it-now:
+        text:
+          bn: এখন ব্যথাটা কোথায় আছে?
+          hi: अभी दर्द कहाँ है?
+        options:
+          ruo-r:
+            bn: ডান স্তন, উপরে ডানদিকে
+            hi: दायाँ स्तन, ऊपर दाईं ओर
+          rlo-r:
+            bn: ডান স্তন, নিচে ডানদিকে
+            hi: दायाँ स्तन, नीचे दाईं ओर
+          luo-r:
+            bn: ডান স্তন, উপরে বামদিকে
+            hi: दायाँ स्तन, ऊपर बाईं ओर
+          llo-r:
+            bn: ডান স্তন, নিচে বামদিকে
+            hi: दायाँ स्तन, नीचे बाईं ओर
+          c-r:
+            bn: ডান স্তনের মাঝখানে
+            hi: दाएँ स्तन के बीच में
+          ruo-l:
+            bn: বাম স্তন, উপরে ডানদিকে
+            hi: बायाँ स्तन, ऊपर दाईं ओर
+          rlo-l:
+            bn: বাম স্তন, নিচে ডানদিকে
+            hi: बायाँ स्तन, नीचे दाईं ओर
+          luo-l:
+            bn: বাম স্তন, উপরে বামদিকে
+            hi: बायाँ स्तन, ऊपर बाईं ओर
+          llo-l:
+            bn: বাম স্তন, নিচে বামদিকে
+            hi: बायाँ स्तन, नीचे बाईं ओर
+          c-r-2:
+            bn: বাম স্তনের মাঝখানে
+            hi: बाएँ स्तन के बीच में
+          all-over:
+            bn: সব জায়গায়
+            hi: हर जगह
+      how-did-the-pain-start:
+        text:
+          bn: ব্যথাটা কীভাবে শুরু হয়েছিল?
+          hi: दर्द कैसे शुरू हुआ था?
+        options:
+          sudden:
+            bn: হঠাৎ
+            hi: अचानक
+          gradual:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      intensity:
+        text:
+          bn: ব্যথাটা কতটা বেশি?
+          hi: दर्द कितना तेज़ है?
+        options:
+          mild:
+            bn: অল্প
+            hi: हल्का
+          moderate:
+            bn: মাঝারি
+            hi: बीच का
+          severe:
+            bn: খুব বেশি
+            hi: बहुत तेज़
+          varies:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी कम, कभी ज़्यादा
+      nature:
+        text:
+          bn: ব্যথাটা কেমন? সবসময় থাকে, নাকি আসে আর যায়?
+          hi: दर्द कैसा है? हर समय रहता है या आता-जाता है?
+        options:
+          continuous:
+            bn: সবসময় থাকে
+            hi: हर समय रहता है
+          comes-and-goes:
+            bn: আসে আর যায়
+            hi: आता-जाता है
+          always-there-but-sometimes-worse:
+            bn: সবসময় থাকে, মাঝে মাঝে বাড়ে
+            hi: हमेशा रहता है, कभी-कभी बढ़ता है
+      what-brings-it-on:
+        text:
+          bn: কী হলে ব্যথাটা শুরু হয় বা বাড়ে?
+          hi: किस वजह से दर्द होता या बढ़ता है?
+        options:
+          period:
+            bn: মাসিকের সময়
+            hi: माहवारी के समय
+          activity:
+            bn: কাজকর্ম করলে
+            hi: काम करने पर
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      relieved-by:
+        text:
+          bn: কী হলে বা কী করলে ব্যথা কমে?
+          hi: किस चीज़ से दर्द कम होता है?
+        options:
+          period:
+            bn: মাসিক হলে
+            hi: माहवारी आने पर
+          rest:
+            bn: বিশ্রাম নিলে
+            hi: आराम करने से
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      any-associated-symptoms:
+        text:
+          bn: এর সাথে আর কোনো সমস্যা আছে কি?
+          hi: क्या इसके साथ कोई और परेशानी भी है?
+        options:
+          discharge-from-nipple:
+            bn: বোঁটা থেকে রস বের হয়
+            hi: निप्पल से पानी निकलना
+          bleeding-from-nipple:
+            bn: বোঁটা থেকে রক্ত পড়ে
+            hi: निप्पल से खून आना
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+  back-pain:
+    name:
+      bn: পিঠে ব্যথা
+      hi: पीठ दर्द
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      where-did-it-start:
+        text:
+          bn: ব্যথাটা প্রথমে কোথায় শুরু হয়েছিল?
+          hi: दर्द सबसे पहले कहाँ शुरू हुआ था?
+        options:
+          upper-r:
+            bn: পিঠের উপরে, ডানদিকে
+            hi: पीठ के ऊपर, दाईं ओर
+          upper-c:
+            bn: পিঠের উপরে, মাঝখানে
+            hi: पीठ के ऊपर, बीच में
+          upper-l:
+            bn: পিঠের উপরে, বামদিকে
+            hi: पीठ के ऊपर, बाईं ओर
+          lower-r:
+            bn: কোমরে, ডানদিকে
+            hi: कमर में, दाईं ओर
+          lower-c:
+            bn: কোমরে, মাঝখানে
+            hi: कमर में, बीच में
+          lower-l:
+            bn: কোমরে, বামদিকে
+            hi: कमर में, बाईं ओर
+          all-over:
+            bn: সব জায়গায়
+            hi: हर जगह
+      where-is-it-now:
+        text:
+          bn: এখন ব্যথাটা কোথায় আছে? অন্য কোথাও ছড়িয়েছে কি?
+          hi: अभी दर्द कहाँ है? क्या कहीं और फैला है?
+        options:
+          did-not-move:
+            bn: একই জায়গায় আছে
+            hi: वहीं पर है
+          moved-to-the-front-r:
+            bn: সামনে ডানদিকে ছড়িয়েছে
+            hi: आगे दाईं तरफ़ फैला
+          moved-to-the-front-l:
+            bn: সামনে বামদিকে ছড়িয়েছে
+            hi: आगे बाईं तरफ़ फैला
+          front-of-leg-r:
+            bn: ডান পায়ের সামনের দিক
+            hi: दाईं टाँग का आगे का हिस्सा
+          back-of-leg-r:
+            bn: ডান পায়ের পিছনের দিক
+            hi: दाईं टाँग का पीछे का हिस्सा
+          front-of-leg-l:
+            bn: বাম পায়ের সামনের দিক
+            hi: बाईं टाँग का आगे का हिस्सा
+          back-of-leg-l:
+            bn: বাম পায়ের পিছনের দিক
+            hi: बाईं टाँग का पीछे का हिस्सा
+          all-over:
+            bn: সব জায়গায়
+            hi: हर जगह
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      how-did-the-pain-start:
+        text:
+          bn: ব্যথাটা কীভাবে শুরু হয়েছিল?
+          hi: दर्द कैसे शुरू हुआ था?
+        options:
+          sudden:
+            bn: হঠাৎ
+            hi: अचानक
+          gradual:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      intensity:
+        text:
+          bn: ব্যথাটা কতটা বেশি?
+          hi: दर्द कितना तेज़ है?
+        options:
+          mild:
+            bn: অল্প
+            hi: हल्का
+          moderate:
+            bn: মাঝারি
+            hi: बीच का
+          severe:
+            bn: খুব বেশি
+            hi: बहुत तेज़
+          varies:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी कम, कभी ज़्यादा
+      nature:
+        text:
+          bn: ব্যথাটা কেমন? সবসময় থাকে, নাকি আসে আর যায়?
+          hi: दर्द कैसा है? हर समय रहता है या आता-जाता है?
+        options:
+          continuous:
+            bn: সবসময় থাকে
+            hi: हर समय रहता है
+          comes-and-goes:
+            bn: আসে আর যায়
+            hi: आता-जाता है
+          always-there-but-sometimes-worse:
+            bn: সবসময় থাকে, মাঝে মাঝে বাড়ে
+            hi: हमेशा रहता है, कभी-कभी बढ़ता है
+      what-brings-it-on:
+        text:
+          bn: কী করলে ব্যথাটা শুরু হয় বা বাড়ে?
+          hi: क्या करने से दर्द होता या बढ़ता है?
+        options:
+          walking:
+            bn: হাঁটলে
+            hi: चलने पर
+          exertion:
+            bn: পরিশ্রম করলে
+            hi: मेहनत करने पर
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      relieved-by:
+        text:
+          bn: কী করলে ব্যথা কমে?
+          hi: किस चीज़ से दर्द कम होता है?
+        options:
+          rest:
+            bn: বিশ্রাম নিলে
+            hi: आराम करने से
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      any-associated-symptoms:
+        text:
+          bn: এর সাথে আর কোনো সমস্যা আছে কি?
+          hi: क्या इसके साथ कोई और परेशानी भी है?
+        options:
+          h-o-injury:
+            bn: আগে চোট লেগেছিল
+            hi: पहले चोट लगी थी
+          weakness-of-legs:
+            bn: পা দুর্বল লাগে
+            hi: पैरों में कमज़ोरी
+          difficult-to-control-urine:
+            bn: প্রস্রাব ধরে রাখতে কষ্ট
+            hi: पेशाब रोकने में दिक्कत
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+  perianal-pain:
+    name:
+      bn: পায়খানার রাস্তায় ব্যথা
+      hi: पाखाने की जगह पर दर्द
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      where-did-it-start:
+        text:
+          bn: ব্যথাটা প্রথমে কোথায় শুরু হয়েছিল?
+          hi: दर्द सबसे पहले कहाँ शुरू हुआ था?
+        options:
+          anal-region:
+            bn: পায়খানার রাস্তায়
+            hi: पाखाने की जगह पर
+          around-the-anal-region:
+            bn: পায়খানার রাস্তার চারপাশে
+            hi: पाखाने की जगह के आसपास
+      where-is-it-now:
+        text:
+          bn: এখন ব্যথাটা কোথায় আছে?
+          hi: अभी दर्द कहाँ है?
+        options:
+          has-not-moved:
+            bn: একই জায়গায় আছে
+            hi: वहीं पर है
+          anal-region:
+            bn: পায়খানার রাস্তায়
+            hi: पाखाने की जगह पर
+          around-the-anal-region:
+            bn: পায়খানার রাস্তার চারপাশে
+            hi: पाखाने की जगह के आसपास
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      intensity:
+        text:
+          bn: ব্যথাটা কতটা বেশি?
+          hi: दर्द कितना तेज़ है?
+        options:
+          mild:
+            bn: অল্প
+            hi: हल्का
+          moderate:
+            bn: মাঝারি
+            hi: बीच का
+          severe:
+            bn: খুব বেশি
+            hi: बहुत तेज़
+          varies:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी कम, कभी ज़्यादा
+      how-did-the-pain-start:
+        text:
+          bn: ব্যথাটা কীভাবে শুরু হয়েছিল?
+          hi: दर्द कैसे शुरू हुआ था?
+        options:
+          sudden:
+            bn: হঠাৎ
+            hi: अचानक
+          gradual:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      nature:
+        text:
+          bn: ব্যথাটা কেমন? সবসময় থাকে, নাকি আসে আর যায়?
+          hi: दर्द कैसा है? हर समय रहता है या आता-जाता है?
+        options:
+          continuous:
+            bn: সবসময় থাকে
+            hi: हर समय रहता है
+          comes-and-goes:
+            bn: আসে আর যায়
+            hi: आता-जाता है
+          always-there-but-sometimes-worse:
+            bn: সবসময় থাকে, মাঝে মাঝে বাড়ে
+            hi: हमेशा रहता है, कभी-कभी बढ़ता है
+      what-brings-it-on:
+        text:
+          bn: কী হলে ব্যথাটা শুরু হয় বা বাড়ে?
+          hi: किस वजह से दर्द होता या बढ़ता है?
+        options:
+          passage-of-stool:
+            bn: পায়খানা করার সময়
+            hi: पाखाना करते समय
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      relieved-by:
+        text:
+          bn: কী করলে ব্যথা কমে?
+          hi: किस चीज़ से दर्द कम होता है?
+        options:
+          rest:
+            bn: বিশ্রাম নিলে
+            hi: आराम करने से
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      any-associated-symptoms:
+        text:
+          bn: এর সাথে আর কোনো সমস্যা আছে কি?
+          hi: क्या इसके साथ कोई और परेशानी भी है?
+        options:
+          fever:
+            bn: জ্বর
+            hi: बुखार
+          discharge:
+            bn: পুঁজ বা রস বের হয়
+            hi: मवाद या पानी निकलना
+          bleeding:
+            bn: রক্ত পড়ে
+            hi: खून आना
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+  difficulty-in-breathing:
+    name:
+      bn: শ্বাসকষ্ট
+      hi: साँस लेने में तकलीफ़
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      how-has-it-progressed:
+        text:
+          bn: শুরু থেকে এখন পর্যন্ত শ্বাসকষ্ট কেমন আছে?
+          hi: शुरू से अब तक साँस की तकलीफ़ कैसी रही है?
+        options:
+          same-as-before:
+            bn: আগের মতোই
+            hi: पहले जैसी ही
+          worsening:
+            bn: বাড়ছে
+            hi: बढ़ रही है
+          improving:
+            bn: কমছে
+            hi: कम हो रही है
+          varies-with-season:
+            bn: আবহাওয়া বদলালে বাড়ে-কমে
+            hi: मौसम के साथ बदलती है
+      what-brings-it-on:
+        text:
+          bn: কী করলে শ্বাসকষ্ট হয় বা বাড়ে?
+          hi: क्या करने से साँस फूलती या बढ़ती है?
+        options:
+          exertion:
+            bn: পরিশ্রম করলে
+            hi: मेहनत करने पर
+          climbing-stairs:
+            bn: সিঁড়ি উঠলে
+            hi: सीढ़ियाँ चढ़ने पर
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      what-relieves-it:
+        text:
+          bn: কী করলে শ্বাসকষ্ট কমে?
+          hi: किस चीज़ से साँस की तकलीफ़ कम होती है?
+        options:
+          rest:
+            bn: বিশ্রাম নিলে
+            hi: आराम करने से
+          sitting-up:
+            bn: উঠে বসলে
+            hi: उठकर बैठने से
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      does-it-wake-you-up-at-night:
+        text:
+          bn: শ্বাসকষ্টের জন্য কি রাতে আপনার ঘুম ভেঙে যায়?
+          hi: क्या साँस की तकलीफ़ से रात में आपकी नींद खुल जाती है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      any-chest-pain:
+        text:
+          bn: আপনার কি বুকে ব্যথা হয়?
+          hi: क्या आपके सीने में दर्द होता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      any-cough:
+        text:
+          bn: আপনার কি কাশি আছে?
+          hi: क्या आपको खाँसी है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      any-associated-symptoms:
+        text:
+          bn: এর সাথে আর কোনো সমস্যা আছে কি?
+          hi: क्या इसके साथ कोई और परेशानी भी है?
+        options:
+          general-weakness:
+            bn: শরীর দুর্বল লাগে
+            hi: शरीर में कमज़ोरी
+          fever:
+            bn: জ্বর
+            hi: बुखार
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+  vomiting:
+    name:
+      bn: বমি
+      hi: उल्टी
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে বমি হচ্ছে?
+          hi: कितने दिनों से उल्टी हो रही है?
+        options: {}
+      nature:
+        text:
+          bn: বমি কি রোজ হয়, নাকি কোনো কোনো দিন?
+          hi: क्या उल्टी रोज़ होती है, या किसी-किसी दिन?
+        options:
+          everyday:
+            bn: রোজ
+            hi: रोज़
+          some-days:
+            bn: কোনো কোনো দিন
+            hi: किसी-किसी दिन
+      frequency:
+        text:
+          bn: দিনে কতবার বমি হয়?
+          hi: दिन में कितनी बार उल्टी होती है?
+        options: {}
+      appetite:
+        text:
+          bn: আপনার খিদে কেমন হচ্ছে?
+          hi: आपको भूख कैसी लग रही है?
+        options:
+          normal:
+            bn: আগের মতোই
+            hi: पहले जैसी
+          less:
+            bn: কম
+            hi: कम
+      what-causes-it:
+        text:
+          bn: কী কারণে বমি হয় বলে আপনার মনে হয়?
+          hi: आपको क्या लगता है, उल्टी किस वजह से होती है?
+        options: {}
+      what-relieves-it:
+        text:
+          bn: কী করলে বমি কমে?
+          hi: किस चीज़ से उल्टी कम होती है?
+        options: {}
+      with-blood:
+        text:
+          bn: বমির সাথে কি রক্ত আসে?
+          hi: क्या उल्टी में खून आता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      any-associated-symptoms:
+        text:
+          bn: এর সাথে আর কোনো সমস্যা আছে কি?
+          hi: क्या इसके साथ कोई और परेशानी भी है?
+        options:
+          abdominal-pain:
+            bn: পেটে ব্যথা
+            hi: पेट में दर्द
+          loss-of-weight:
+            bn: ওজন কমে যাওয়া
+            hi: वज़न कम होना
+          headache:
+            bn: মাথাব্যথা
+            hi: सिरदर्द
+          diarrhoea:
+            bn: পাতলা পায়খানা
+            hi: दस्त
+          constipation:
+            bn: পায়খানা কষা
+            hi: कब्ज़
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+      nausea:
+        text:
+          bn: আপনার কি বমি বমি ভাব হয়?
+          hi: क्या आपका जी मिचलाता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+  fainting:
+    name:
+      bn: অজ্ঞান হয়ে যাওয়া
+      hi: बेहोशी
+    questions:
+      no-of-episodes:
+        text:
+          bn: এখন পর্যন্ত কতবার অজ্ঞান হয়েছেন?
+          hi: अब तक कितनी बार बेहोश हुए हैं?
+        options: {}
+      interval-between-episodes:
+        text:
+          bn: একবার থেকে পরের বারের মধ্যে কতদিন বা কতক্ষণ ফাঁক থাকে?
+          hi: एक बार से अगली बार के बीच कितने दिन या कितना समय होता है?
+        options: {}
+      is-consciousness-lost:
+        text:
+          bn: তখন কি আপনি পুরোপুরি জ্ঞান হারিয়ে ফেলেন?
+          hi: क्या उस समय आप पूरी तरह होश खो देते हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      any-associated-fits:
+        text:
+          bn: তখন কি খিঁচুনি হয়?
+          hi: क्या उस समय दौरे (झटके) आते हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      fall:
+        text:
+          bn: তখন কি আপনি পড়ে যান?
+          hi: क्या उस समय आप गिर जाते हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      dizziness:
+        text:
+          bn: আপনার কি মাথা ঘোরে?
+          hi: क्या आपको चक्कर आते हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      what-brings-it-on:
+        text:
+          bn: কী হলে বা কী করলে এটা হয়?
+          hi: किस वजह से या क्या करने पर ऐसा होता है?
+        options: {}
+      how-is-it-relieved:
+        text:
+          bn: কী করলে এটা ঠিক হয়?
+          hi: किस चीज़ से यह ठीक होता है?
+        options: {}
+  other:
+    name:
+      bn: অন্য সমস্যা
+      hi: कोई और परेशानी
+    questions:
+      please-describe-the-complaint:
+        text:
+          bn: আপনার সমস্যাটা একটু খুলে বলুন।
+          hi: कृपया अपनी परेशानी के बारे में बताइए।
+        options: {}
+  chest-pain:
+    name:
+      bn: বুকে ব্যথা
+      hi: सीने में दर्द
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে বুকে ব্যথা হচ্ছে?
+          hi: सीने में दर्द कितने दिनों से है?
+        options: {}
+      where-did-it-start:
+        text:
+          bn: ব্যথাটা বুকের কোথায় প্রথম শুরু হয়েছিল?
+          hi: दर्द सीने में सबसे पहले कहाँ शुरू हुआ था?
+        options:
+          upper-r:
+            bn: উপরে ডান দিকে
+            hi: ऊपर दाईं ओर
+          upper-c:
+            bn: উপরে মাঝখানে
+            hi: ऊपर बीच में
+          upper-l:
+            bn: উপরে বাম দিকে
+            hi: ऊपर बाईं ओर
+          lower-r:
+            bn: নিচে ডান দিকে
+            hi: नीचे दाईं ओर
+          lower-c:
+            bn: নিচে মাঝখানে
+            hi: नीचे बीच में
+          lower-l:
+            bn: নিচে বাম দিকে
+            hi: नीचे बाईं ओर
+          all-over:
+            bn: পুরো বুকে
+            hi: पूरे सीने में
+      where-is-it-now:
+        text:
+          bn: ব্যথাটা এখন কোথায় আছে? অন্য কোথাও ছড়িয়েছে কি?
+          hi: दर्द अब कहाँ है? क्या कहीं और फैला है?
+        options:
+          did-not-move:
+            bn: একই জায়গায় আছে
+            hi: वहीं है, हटा नहीं
+          upper-r:
+            bn: উপরে ডান দিকে
+            hi: ऊपर दाईं ओर
+          upper-c:
+            bn: উপরে মাঝখানে
+            hi: ऊपर बीच में
+          upper-l:
+            bn: উপরে বাম দিকে
+            hi: ऊपर बाईं ओर
+          lower-r:
+            bn: নিচে ডান দিকে
+            hi: नीचे दाईं ओर
+          lower-c:
+            bn: নিচে মাঝখানে
+            hi: नीचे बीच में
+          lower-l:
+            bn: নিচে বাম দিকে
+            hi: नीचे बाईं ओर
+          arm-l:
+            bn: বাম হাতে
+            hi: बाएँ हाथ में
+          neck-jaw:
+            bn: ঘাড় বা চোয়ালে
+            hi: गर्दन या जबड़े में
+          all-over:
+            bn: পুরো বুকে
+            hi: पूरे सीने में
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      how-did-the-pain-start:
+        text:
+          bn: ব্যথাটা কীভাবে শুরু হয়েছিল?
+          hi: दर्द कैसे शुरू हुआ था?
+        options:
+          sudden:
+            bn: হঠাৎ
+            hi: अचानक
+          gradual:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      intensity:
+        text:
+          bn: ব্যথাটা কতটা জোরে হয়?
+          hi: दर्द कितना तेज़ है?
+        options:
+          mild:
+            bn: হালকা
+            hi: हल्का
+          moderate:
+            bn: মাঝারি
+            hi: मध्यम
+          severe:
+            bn: খুব বেশি
+            hi: बहुत तेज़
+          varies:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी कम, कभी ज़्यादा
+      nature:
+        text:
+          bn: ব্যথাটা কেমন লাগে?
+          hi: दर्द कैसा महसूस होता है?
+        options:
+          dull:
+            bn: ভার ভার, চাপা ব্যথা
+            hi: भारी-भारी, मंद दर्द
+          sharp:
+            bn: সূঁচ ফোটার মতো
+            hi: चुभने जैसा
+          sense-of-pressure:
+            bn: বুকে চাপ লাগে
+            hi: सीने पर दबाव जैसा
+          constant:
+            bn: সবসময় থাকে
+            hi: लगातार रहता है
+      what-brings-it-on:
+        text:
+          bn: কী করলে ব্যথাটা শুরু হয়?
+          hi: क्या करने पर दर्द शुरू होता है?
+        options:
+          exertion:
+            bn: পরিশ্রম করলে
+            hi: मेहनत करने पर
+          cough:
+            bn: কাশি দিলে
+            hi: खाँसने पर
+          injury:
+            bn: চোট লাগার পর
+            hi: चोट लगने से
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      relieved-by:
+        text:
+          bn: কী করলে ব্যথা কমে?
+          hi: क्या करने से दर्द कम होता है?
+        options:
+          rest:
+            bn: বিশ্রাম নিলে
+            hi: आराम करने से
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      any-associated-symptoms:
+        text:
+          bn: ব্যথার সাথে আর কোনো সমস্যা হয় কি?
+          hi: क्या दर्द के साथ कोई और परेशानी होती है?
+        options:
+          sweating:
+            bn: ঘাম হওয়া
+            hi: पसीना आना
+          extreme-anxiety:
+            bn: খুব ভয় বা অস্থিরতা
+            hi: बहुत घबराहट
+          unconsciousness:
+            bn: অজ্ঞান হয়ে যাওয়া
+            hi: बेहोश हो जाना
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          difficulty-in-breathing:
+            bn: শ্বাস নিতে কষ্ট
+            hi: साँस लेने में तकलीफ़
+          others-2:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+  throat-swelling:
+    name:
+      bn: গলা ফোলা
+      hi: गले में सूजन
+    questions:
+      where-is-it:
+        text:
+          bn: ফোলাটা কোথায়?
+          hi: सूजन कहाँ है?
+        options:
+          back-of-mouth:
+            bn: মুখের ভিতরে পিছনের দিকে
+            hi: मुँह के अंदर पीछे की ओर
+          front-of-throat:
+            bn: গলার সামনে
+            hi: गले के सामने
+      how-many:
+        text:
+          bn: কয় জায়গায় ফোলা আছে?
+          hi: सूजन कितनी जगह पर है?
+        options: {}
+      duration:
+        text:
+          bn: কতদিন ধরে এই ফোলা আছে?
+          hi: यह सूजन कितने दिनों से है?
+        options: {}
+      how-did-it-start:
+        text:
+          bn: ফোলাটা কীভাবে শুরু হয়েছিল?
+          hi: सूजन कैसे शुरू हुई थी?
+        options:
+          gradually:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          suddenly:
+            bn: হঠাৎ
+            hi: अचानक
+      painful-or-not:
+        text:
+          bn: ফোলা জায়গায় কি ব্যথা আছে?
+          hi: क्या सूजन वाली जगह पर दर्द है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      has-it-changed-in-size:
+        text:
+          bn: ফোলাটা কি বেড়েছে বা কমেছে?
+          hi: क्या सूजन बढ़ी या घटी है?
+        options:
+          no-change:
+            bn: একই আছে
+            hi: पहले जैसी है
+          increase:
+            bn: বেড়েছে
+            hi: बढ़ी है
+          decrease:
+            bn: কমেছে
+            hi: घटी है
+      any-change-in-colour-of-skin:
+        text:
+          bn: ফোলার উপরের চামড়ার রং কি বদলেছে?
+          hi: क्या सूजन के ऊपर की चमड़ी का रंग बदला है?
+        options:
+          no-change:
+            bn: বদলায়নি
+            hi: नहीं बदला
+          change:
+            bn: বদলেছে
+            hi: बदला है
+      any-other-symptom:
+        text:
+          bn: আর কোনো সমস্যা আছে কি?
+          hi: क्या कोई और परेशानी है?
+        options:
+          difficulty-in-work:
+            bn: কাজ করতে অসুবিধা
+            hi: काम करने में दिक्कत
+          difficulty-in-movement:
+            bn: নড়াচড়া করতে অসুবিধা
+            hi: हिलने-डुलने में दिक्कत
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+      any-history-of-injury:
+        text:
+          bn: এই জায়গায় কি কখনো চোট লেগেছিল?
+          hi: क्या यहाँ कभी चोट लगी थी?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      excessive-sweating:
+        text:
+          bn: আপনার কি খুব বেশি ঘাম হয়?
+          hi: क्या आपको बहुत ज़्यादा पसीना आता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      constipation:
+        text:
+          bn: আপনার কি পায়খানা কষা হয়, মানে ঠিকমতো পরিষ্কার হয় না?
+          hi: क्या आपको कब्ज़ रहता है, यानी पेट ठीक से साफ़ नहीं होता?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      period-problem:
+        text:
+          bn: আপনার মাসিকে কি কোনো সমস্যা হচ্ছে?
+          hi: क्या आपको माहवारी (पीरियड) में कोई परेशानी है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      excessive-appetite:
+        text:
+          bn: আপনার কি আগের চেয়ে অনেক বেশি খিদে পায়?
+          hi: क्या आपको पहले से बहुत ज़्यादा भूख लगती है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      change-in-weight:
+        text:
+          bn: আপনার ওজন কি বেড়েছে বা কমেছে?
+          hi: क्या आपका वज़न बढ़ा या घटा है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      general-weakness:
+        text:
+          bn: আপনার কি শরীর দুর্বল লাগে?
+          hi: क्या आपको पूरे शरीर में कमज़ोरी लगती है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+  private-parts-problem:
+    name:
+      bn: গোপনাঙ্গের সমস্যা
+      hi: गुप्तांग की परेशानी
+    questions:
+      married:
+        text:
+          bn: আপনি কি বিবাহিত?
+          hi: क्या आपकी शादी हो चुकी है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      date-of-lmp:
+        text:
+          bn: আপনার শেষ মাসিক কোন তারিখে শুরু হয়েছিল?
+          hi: आपकी पिछली माहवारी किस तारीख को शुरू हुई थी?
+        options: {}
+      duration-of-period:
+        text:
+          bn: আপনার মাসিক সাধারণত কতদিন ধরে চলে?
+          hi: आपकी माहवारी आमतौर पर कितने दिन चलती है?
+        options:
+          regular:
+            bn: প্রতিবার একই
+            hi: हर बार एक जैसी
+          varies:
+            bn: কম-বেশি হয়
+            hi: कम-ज़्यादा होती है
+      interval-between-periods:
+        text:
+          bn: এক মাসিকের পর পরের মাসিক কতদিন পরে আসে?
+          hi: एक माहवारी के बाद अगली माहवारी कितने दिन बाद आती है?
+        options:
+          regular:
+            bn: ঠিক সময়ে আসে
+            hi: समय पर आती है
+          varies:
+            bn: আগে-পরে হয়
+            hi: आगे-पीछे होती है
+      flow:
+        text:
+          bn: মাসিকে রক্ত কতটা যায়?
+          hi: माहवारी में खून कितना आता है?
+        options:
+          normal:
+            bn: স্বাভাবিক
+            hi: सामान्य
+          heavy:
+            bn: বেশি
+            hi: ज़्यादा
+          low:
+            bn: কম
+            hi: कम
+          varies:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी कम, कभी ज़्यादा
+      no-of-children:
+        text:
+          bn: আপনার কয়টি সন্তান আছে?
+          hi: आपके कितने बच्चे हैं?
+        options: {}
+      no-of-pregnancies:
+        text:
+          bn: আপনি মোট কতবার পেটে বাচ্চা এসেছে (বাচ্চা নষ্ট হয়ে যাওয়া সহ)?
+          hi: आप कुल कितनी बार गर्भवती हुई हैं (गर्भ गिरने को भी मिलाकर)?
+        options: {}
+      age-at-first-childbirth:
+        text:
+          bn: প্রথম সন্তান হওয়ার সময় আপনার বয়স কত ছিল?
+          hi: पहले बच्चे के जन्म के समय आपकी उम्र कितनी थी?
+        options: {}
+      last-childbirth:
+        text:
+          bn: আপনার শেষ সন্তান কবে হয়েছে?
+          hi: आपका आख़िरी बच्चा कब हुआ था?
+        options: {}
+      contraception-practice:
+        text:
+          bn: বাচ্চা না হওয়ার জন্য আপনি কি কোনো উপায় (বড়ি, কপার-টি ইত্যাদি) ব্যবহার করেন?
+          hi: क्या आप बच्चा रोकने का कोई तरीका (गोली, कॉपर-टी आदि) अपनाती हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      any-discharge:
+        text:
+          bn: গোপনাঙ্গ দিয়ে কি সাদা জল বা অন্য কিছু বের হয়?
+          hi: क्या गुप्तांग से सफ़ेद पानी या कुछ और निकलता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      bleeding-between-periods:
+        text:
+          bn: দুই মাসিকের মাঝখানে কি রক্ত যায়?
+          hi: क्या दो माहवारी के बीच में खून आता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      pain:
+        text:
+          bn: গোপনাঙ্গে বা তলপেটে কি ব্যথা হয়?
+          hi: क्या गुप्तांग में या पेट के निचले हिस्से में दर्द होता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      itching:
+        text:
+          bn: গোপনাঙ্গে কি চুলকানি হয়?
+          hi: क्या गुप्तांग में खुजली होती है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      any-other-problem:
+        text:
+          bn: আর কোনো সমস্যা আছে কি?
+          hi: क्या कोई और परेशानी है?
+        options:
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          none-2:
+            bn: কিছু না
+            hi: कुछ नहीं
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+  ear-pain:
+    name:
+      bn: কানে ব্যথা
+      hi: कान में दर्द
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে কানে ব্যথা হচ্ছে?
+          hi: कान में दर्द कितने दिनों से है?
+        options: {}
+      where-did-it-start:
+        text:
+          bn: কোন কানে ব্যথা শুরু হয়েছিল?
+          hi: दर्द किस कान में शुरू हुआ था?
+        options:
+          right:
+            bn: ডান কানে
+            hi: दाएँ कान में
+          left:
+            bn: বাম কানে
+            hi: बाएँ कान में
+          both:
+            bn: দুই কানেই
+            hi: दोनों कानों में
+      where-is-it-now:
+        text:
+          bn: ব্যথাটা এখন কোথায় আছে? অন্য কোথাও ছড়িয়েছে কি?
+          hi: दर्द अब कहाँ है? क्या कहीं और फैला है?
+        options:
+          did-not-move:
+            bn: একই জায়গায় আছে
+            hi: वहीं है, हटा नहीं
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      how-did-the-pain-start:
+        text:
+          bn: ব্যথাটা কীভাবে শুরু হয়েছিল?
+          hi: दर्द कैसे शुरू हुआ था?
+        options:
+          sudden:
+            bn: হঠাৎ
+            hi: अचानक
+          gradual:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      intensity:
+        text:
+          bn: ব্যথাটা কতটা জোরে হয়?
+          hi: दर्द कितना तेज़ है?
+        options:
+          mild:
+            bn: হালকা
+            hi: हल्का
+          moderate:
+            bn: মাঝারি
+            hi: मध्यम
+          severe:
+            bn: খুব বেশি
+            hi: बहुत तेज़
+          varies:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी कम, कभी ज़्यादा
+      nature:
+        text:
+          bn: ব্যথাটা কি সবসময় থাকে, না আসে-যায়?
+          hi: दर्द हर समय रहता है या आता-जाता है?
+        options:
+          continuous:
+            bn: সবসময় থাকে
+            hi: लगातार रहता है
+          comes-and-goes:
+            bn: আসে আর যায়
+            hi: आता-जाता है
+          always-there-but-sometimes-worse:
+            bn: সবসময় থাকে, মাঝে মাঝে বাড়ে
+            hi: हमेशा रहता है, कभी-कभी बढ़ता है
+      what-brings-it-on:
+        text:
+          bn: কী করলে ব্যথা শুরু হয় বা বাড়ে?
+          hi: क्या करने पर दर्द शुरू होता है या बढ़ता है?
+        options:
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      relieved-by:
+        text:
+          bn: কী করলে ব্যথা কমে?
+          hi: क्या करने से दर्द कम होता है?
+        options:
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      any-associated-symptoms:
+        text:
+          bn: কানে ব্যথার সাথে আর কোনো সমস্যা আছে কি?
+          hi: क्या कान के दर्द के साथ कोई और परेशानी है?
+        options:
+          h-o-injury:
+            bn: কানে চোট লেগেছিল
+            hi: कान में चोट लगी थी
+          discharge-from-ear:
+            bn: কান দিয়ে পুঁজ বা জল পড়া
+            hi: कान से पानी या मवाद आना
+          bleeding-from-ear:
+            bn: কান দিয়ে রক্ত পড়া
+            hi: कान से खून आना
+          diminished-hearing:
+            bn: কানে কম শোনা
+            hi: कम सुनाई देना
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+  coughing-problem-in-throat:
+    name:
+      bn: কাশি / গলার সমস্যা
+      hi: खाँसी / गले की परेशानी
+    questions:
+      when-did-it-start:
+        text:
+          bn: কাশি বা গলার সমস্যা কবে থেকে শুরু হয়েছে?
+          hi: खाँसी या गले की परेशानी कब से शुरू हुई?
+        options: {}
+      how-often:
+        text:
+          bn: কাশি কখন কখন হয়?
+          hi: खाँसी कब-कब होती है?
+        options:
+          all-day:
+            bn: সারাদিন
+            hi: पूरे दिन
+          only-at-night:
+            bn: শুধু রাতে
+            hi: सिर्फ़ रात में
+          only-in-morning:
+            bn: শুধু সকালে
+            hi: सिर्फ़ सुबह
+          sometimes:
+            bn: মাঝে মাঝে
+            hi: कभी-कभी
+      is-there-any-sputum:
+        text:
+          bn: কাশির সাথে কি কফ বের হয়?
+          hi: क्या खाँसी के साथ बलगम निकलता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      what-is-the-colour:
+        text:
+          bn: কফের রং কেমন?
+          hi: बलगम का रंग कैसा है?
+        options:
+          yellow:
+            bn: হলুদ
+            hi: पीला
+          green:
+            bn: সবুজ
+            hi: हरा
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      what-is-the-amount:
+        text:
+          bn: কতটা কফ বের হয়?
+          hi: बलगम कितना निकलता है?
+        options:
+          lot:
+            bn: অনেক
+            hi: बहुत
+          medium:
+            bn: মাঝারি
+            hi: मध्यम
+          small:
+            bn: অল্প
+            hi: थोड़ा
+      is-there-any-fever:
+        text:
+          bn: আপনার কি জ্বর আছে?
+          hi: क्या आपको बुखार है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      is-there-any-difficulty-in-swallowing:
+        text:
+          bn: খাবার বা জল গিলতে কি কষ্ট হয়?
+          hi: क्या खाना या पानी निगलने में तकलीफ़ होती है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      is-there-any-pain-in-throat:
+        text:
+          bn: গলায় কি ব্যথা আছে?
+          hi: क्या गले में दर्द है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      is-there-any-difficulty-in-breathing:
+        text:
+          bn: শ্বাস নিতে কি কষ্ট হয়?
+          hi: क्या साँस लेने में तकलीफ़ होती है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+  swelling-others:
+    name:
+      bn: ফোলা (অন্য জায়গায়)
+      hi: सूजन (किसी और जगह)
+    questions:
+      where-is-it:
+        text:
+          bn: শরীরের কোথায় ফোলা আছে?
+          hi: शरीर में सूजन कहाँ है?
+        options: {}
+      how-many:
+        text:
+          bn: কয় জায়গায় ফোলা আছে?
+          hi: सूजन कितनी जगह पर है?
+        options: {}
+      duration:
+        text:
+          bn: কতদিন ধরে এই ফোলা আছে?
+          hi: यह सूजन कितने दिनों से है?
+        options: {}
+      how-did-it-start:
+        text:
+          bn: ফোলাটা কীভাবে শুরু হয়েছিল?
+          hi: सूजन कैसे शुरू हुई थी?
+        options:
+          gradually:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          suddenly:
+            bn: হঠাৎ
+            hi: अचानक
+      painful-or-not:
+        text:
+          bn: ফোলা জায়গায় কি ব্যথা আছে?
+          hi: क्या सूजन वाली जगह पर दर्द है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      has-it-changed-in-size:
+        text:
+          bn: ফোলাটা কি বেড়েছে বা কমেছে?
+          hi: क्या सूजन बढ़ी या घटी है?
+        options:
+          no-change:
+            bn: একই আছে
+            hi: पहले जैसी है
+          increase:
+            bn: বেড়েছে
+            hi: बढ़ी है
+          decrease:
+            bn: কমেছে
+            hi: घटी है
+      any-change-in-colour-of-skin:
+        text:
+          bn: ফোলার উপরের চামড়ার রং কি বদলেছে?
+          hi: क्या सूजन के ऊपर की चमड़ी का रंग बदला है?
+        options:
+          no-change:
+            bn: বদলায়নি
+            hi: नहीं बदला
+          change:
+            bn: বদলেছে
+            hi: बदला है
+      any-other-symptom:
+        text:
+          bn: আর কোনো সমস্যা আছে কি?
+          hi: क्या कोई और परेशानी है?
+        options:
+          difficulty-in-work:
+            bn: কাজ করতে অসুবিধা
+            hi: काम करने में दिक्कत
+          difficulty-in-movement:
+            bn: নড়াচড়া করতে অসুবিধা
+            hi: हिलने-डुलने में दिक्कत
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+      any-history-of-injury:
+        text:
+          bn: এই জায়গায় কি কখনো চোট লেগেছিল?
+          hi: क्या यहाँ कभी चोट लगी थी?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+  palpitation:
+    name:
+      bn: বুক ধড়ফড় করা
+      hi: दिल की धड़कन तेज़ होना
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে বুক ধড়ফড় করছে?
+          hi: दिल की धड़कन तेज़ होने की परेशानी कितने दिनों से है?
+        options: {}
+      type:
+        text:
+          bn: বুক ধড়ফড় কি মাঝে মাঝে হয়, না সবসময় থাকে?
+          hi: धड़कन कभी-कभी तेज़ होती है या हमेशा?
+        options:
+          intermittent:
+            bn: মাঝে মাঝে
+            hi: कभी-कभी
+          always:
+            bn: সবসময়
+            hi: हमेशा
+      how-long-does-it-last:
+        text:
+          bn: একবার শুরু হলে কতক্ষণ থাকে?
+          hi: एक बार शुरू होने पर कितनी देर रहती है?
+        options: {}
+      any-associated-symptoms:
+        text:
+          bn: এর সাথে আর কোনো সমস্যা হয় কি?
+          hi: क्या इसके साथ कोई और परेशानी होती है?
+        options:
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+      fainting:
+        text:
+          bn: বুক ধড়ফড়ের সময় কি অজ্ঞান হয়ে যান?
+          hi: क्या धड़कन तेज़ होने पर आप बेहोश हो जाते हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      fall:
+        text:
+          bn: বুক ধড়ফড়ের সময় কি কখনো পড়ে গেছেন?
+          hi: क्या धड़कन तेज़ होने पर आप कभी गिर पड़े हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      dizziness:
+        text:
+          bn: আপনার কি মাথা ঘোরে?
+          hi: क्या आपको चक्कर आता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      what-brings-it-on:
+        text:
+          bn: কী করলে বুক ধড়ফড় শুরু হয়?
+          hi: क्या करने पर या किस वजह से धड़कन तेज़ होती है?
+        options: {}
+      how-is-it-relieved:
+        text:
+          bn: কী করলে বুক ধড়ফড় কমে?
+          hi: क्या करने से धड़कन ठीक होती है?
+        options: {}
+  joint-pain:
+    name:
+      bn: গাঁটে ব্যথা
+      hi: जोड़ों का दर्द
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      where-did-it-start:
+        text:
+          bn: ব্যথা প্রথমে কোথায় শুরু হয়েছিল?
+          hi: दर्द सबसे पहले कहाँ शुरू हुआ था?
+        options:
+          neck:
+            bn: ঘাড়
+            hi: गर्दन
+          shoulder-r:
+            bn: ডান কাঁধ
+            hi: दायाँ कंधा
+          shoulder-l:
+            bn: বাম কাঁধ
+            hi: बायाँ कंधा
+          shoulder-b:
+            bn: দুই কাঁধ
+            hi: दोनों कंधे
+          elbow-r:
+            bn: ডান কনুই
+            hi: दाईं कोहनी
+          elbow-l:
+            bn: বাম কনুই
+            hi: बाईं कोहनी
+          elbow-b:
+            bn: দুই কনুই
+            hi: दोनों कोहनियाँ
+          wrist-r:
+            bn: ডান কব্জি
+            hi: दाईं कलाई
+          wrist-l:
+            bn: বাম কব্জি
+            hi: बाईं कलाई
+          wrist-b:
+            bn: দুই কব্জি
+            hi: दोनों कलाइयाँ
+          all-fingers-r:
+            bn: ডান হাতের সব আঙুল
+            hi: दाएँ हाथ की सभी उंगलियाँ
+          thumb-r:
+            bn: ডান হাতের বুড়ো আঙুল
+            hi: दाएँ हाथ का अंगूठा
+          index-finger-r:
+            bn: ডান হাতের বুড়ো আঙুলের পাশের আঙুল
+            hi: दाएँ हाथ की अंगूठे के पास वाली उंगली
+          middle-finger-r:
+            bn: ডান হাতের মাঝের আঙুল
+            hi: दाएँ हाथ की बीच की उंगली
+          ring-finger-r:
+            bn: ডান হাতের আংটির আঙুল
+            hi: दाएँ हाथ की अंगूठी वाली उंगली
+          little-finger-r:
+            bn: ডান হাতের কড়ে আঙুল
+            hi: दाएँ हाथ की छोटी उंगली
+          all-fingers-l:
+            bn: বাম হাতের সব আঙুল
+            hi: बाएँ हाथ की सभी उंगलियाँ
+          thumb-l:
+            bn: বাম হাতের বুড়ো আঙুল
+            hi: बाएँ हाथ का अंगूठा
+          index-finger-l:
+            bn: বাম হাতের বুড়ো আঙুলের পাশের আঙুল
+            hi: बाएँ हाथ की अंगूठे के पास वाली उंगली
+          middle-finger-l:
+            bn: বাম হাতের মাঝের আঙুল
+            hi: बाएँ हाथ की बीच की उंगली
+          ring-finger-l:
+            bn: বাম হাতের আংটির আঙুল
+            hi: बाएँ हाथ की अंगूठी वाली उंगली
+          little-finger-l:
+            bn: বাম হাতের কড়ে আঙুল
+            hi: बाएँ हाथ की छोटी उंगली
+          all-fingers-b:
+            bn: দুই হাতের সব আঙুল
+            hi: दोनों हाथों की सभी उंगलियाँ
+          thumb-b:
+            bn: দুই হাতের বুড়ো আঙুল
+            hi: दोनों हाथों के अंगूठे
+          index-finger-b:
+            bn: দুই হাতের বুড়ো আঙুলের পাশের আঙুল
+            hi: दोनों हाथों की अंगूठे के पास वाली उंगलियाँ
+          middle-finger-b:
+            bn: দুই হাতের মাঝের আঙুল
+            hi: दोनों हाथों की बीच की उंगलियाँ
+          ring-finger-b:
+            bn: দুই হাতের আংটির আঙুল
+            hi: दोनों हाथों की अंगूठी वाली उंगलियाँ
+          little-finger-b:
+            bn: দুই হাতের কড়ে আঙুল
+            hi: दोनों हाथों की छोटी उंगलियाँ
+          hip-r:
+            bn: ডান কোমরের জোড়
+            hi: दायाँ कूल्हा
+          hip-l:
+            bn: বাম কোমরের জোড়
+            hi: बायाँ कूल्हा
+          hip-b:
+            bn: দুই দিকের কোমরের জোড়
+            hi: दोनों कूल्हे
+          knee-r:
+            bn: ডান হাঁটু
+            hi: दायाँ घुटना
+          knee-l:
+            bn: বাম হাঁটু
+            hi: बायाँ घुटना
+          knee-b:
+            bn: দুই হাঁটু
+            hi: दोनों घुटने
+          ankle-r:
+            bn: ডান গোড়ালির গাঁট
+            hi: दायाँ टखना
+          ankle-l:
+            bn: বাম গোড়ালির গাঁট
+            hi: बायाँ टखना
+          ankle-b:
+            bn: দুই গোড়ালির গাঁট
+            hi: दोनों टखने
+          all-toes-r:
+            bn: ডান পায়ের সব আঙুল
+            hi: दाएँ पैर की सभी उंगलियाँ
+          great-toe-r:
+            bn: ডান পায়ের বুড়ো আঙুল
+            hi: दाएँ पैर का अंगूठा
+          other-toes-r:
+            bn: ডান পায়ের বাকি আঙুল
+            hi: दाएँ पैर की बाकी उंगलियाँ
+          all-toes-l:
+            bn: বাম পায়ের সব আঙুল
+            hi: बाएँ पैर की सभी उंगलियाँ
+          great-toe-l:
+            bn: বাম পায়ের বুড়ো আঙুল
+            hi: बाएँ पैर का अंगूठा
+          other-toes-l:
+            bn: বাম পায়ের বাকি আঙুল
+            hi: बाएँ पैर की बाकी उंगलियाँ
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      where-is-it-now:
+        text:
+          bn: ব্যথা এখন কোথায় আছে?
+          hi: दर्द अभी कहाँ है?
+        options:
+          same-place:
+            bn: একই জায়গায়
+            hi: उसी जगह पर
+          neck:
+            bn: ঘাড়
+            hi: गर्दन
+          shoulder-r:
+            bn: ডান কাঁধ
+            hi: दायाँ कंधा
+          shoulder-l:
+            bn: বাম কাঁধ
+            hi: बायाँ कंधा
+          shoulder-b:
+            bn: দুই কাঁধ
+            hi: दोनों कंधे
+          elbow-r:
+            bn: ডান কনুই
+            hi: दाईं कोहनी
+          elbow-l:
+            bn: বাম কনুই
+            hi: बाईं कोहनी
+          elbow-b:
+            bn: দুই কনুই
+            hi: दोनों कोहनियाँ
+          wrist-r:
+            bn: ডান কব্জি
+            hi: दाईं कलाई
+          wrist-l:
+            bn: বাম কব্জি
+            hi: बाईं कलाई
+          wrist-b:
+            bn: দুই কব্জি
+            hi: दोनों कलाइयाँ
+          all-fingers-r:
+            bn: ডান হাতের সব আঙুল
+            hi: दाएँ हाथ की सभी उंगलियाँ
+          thumb-r:
+            bn: ডান হাতের বুড়ো আঙুল
+            hi: दाएँ हाथ का अंगूठा
+          index-finger-r:
+            bn: ডান হাতের বুড়ো আঙুলের পাশের আঙুল
+            hi: दाएँ हाथ की अंगूठे के पास वाली उंगली
+          middle-finger-r:
+            bn: ডান হাতের মাঝের আঙুল
+            hi: दाएँ हाथ की बीच की उंगली
+          ring-finger-r:
+            bn: ডান হাতের আংটির আঙুল
+            hi: दाएँ हाथ की अंगूठी वाली उंगली
+          little-finger-r:
+            bn: ডান হাতের কড়ে আঙুল
+            hi: दाएँ हाथ की छोटी उंगली
+          all-fingers-l:
+            bn: বাম হাতের সব আঙুল
+            hi: बाएँ हाथ की सभी उंगलियाँ
+          thumb-l:
+            bn: বাম হাতের বুড়ো আঙুল
+            hi: बाएँ हाथ का अंगूठा
+          index-finger-l:
+            bn: বাম হাতের বুড়ো আঙুলের পাশের আঙুল
+            hi: बाएँ हाथ की अंगूठे के पास वाली उंगली
+          middle-finger-l:
+            bn: বাম হাতের মাঝের আঙুল
+            hi: बाएँ हाथ की बीच की उंगली
+          ring-finger-l:
+            bn: বাম হাতের আংটির আঙুল
+            hi: बाएँ हाथ की अंगूठी वाली उंगली
+          little-finger-l:
+            bn: বাম হাতের কড়ে আঙুল
+            hi: बाएँ हाथ की छोटी उंगली
+          all-fingers-b:
+            bn: দুই হাতের সব আঙুল
+            hi: दोनों हाथों की सभी उंगलियाँ
+          thumb-b:
+            bn: দুই হাতের বুড়ো আঙুল
+            hi: दोनों हाथों के अंगूठे
+          index-finger-b:
+            bn: দুই হাতের বুড়ো আঙুলের পাশের আঙুল
+            hi: दोनों हाथों की अंगूठे के पास वाली उंगलियाँ
+          middle-finger-b:
+            bn: দুই হাতের মাঝের আঙুল
+            hi: दोनों हाथों की बीच की उंगलियाँ
+          ring-finger-b:
+            bn: দুই হাতের আংটির আঙুল
+            hi: दोनों हाथों की अंगूठी वाली उंगलियाँ
+          little-finger-b:
+            bn: দুই হাতের কড়ে আঙুল
+            hi: दोनों हाथों की छोटी उंगलियाँ
+          hip-r:
+            bn: ডান কোমরের জোড়
+            hi: दायाँ कूल्हा
+          hip-l:
+            bn: বাম কোমরের জোড়
+            hi: बायाँ कूल्हा
+          hip-b:
+            bn: দুই দিকের কোমরের জোড়
+            hi: दोनों कूल्हे
+          knee-r:
+            bn: ডান হাঁটু
+            hi: दायाँ घुटना
+          knee-l:
+            bn: বাম হাঁটু
+            hi: बायाँ घुटना
+          knee-b:
+            bn: দুই হাঁটু
+            hi: दोनों घुटने
+          ankle-r:
+            bn: ডান গোড়ালির গাঁট
+            hi: दायाँ टखना
+          ankle-l:
+            bn: বাম গোড়ালির গাঁট
+            hi: बायाँ टखना
+          ankle-b:
+            bn: দুই গোড়ালির গাঁট
+            hi: दोनों टखने
+          all-toes-r:
+            bn: ডান পায়ের সব আঙুল
+            hi: दाएँ पैर की सभी उंगलियाँ
+          great-toe-r:
+            bn: ডান পায়ের বুড়ো আঙুল
+            hi: दाएँ पैर का अंगूठा
+          other-toes-r:
+            bn: ডান পায়ের বাকি আঙুল
+            hi: दाएँ पैर की बाकी उंगलियाँ
+          all-toes-l:
+            bn: বাম পায়ের সব আঙুল
+            hi: बाएँ पैर की सभी उंगलियाँ
+          great-toe-l:
+            bn: বাম পায়ের বুড়ো আঙুল
+            hi: बाएँ पैर का अंगूठा
+          other-toes-l:
+            bn: বাম পায়ের বাকি আঙুল
+            hi: बाएँ पैर की बाकी उंगलियाँ
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      how-did-the-pain-start:
+        text:
+          bn: ব্যথা কীভাবে শুরু হয়েছিল?
+          hi: दर्द कैसे शुरू हुआ था?
+        options:
+          sudden:
+            bn: হঠাৎ
+            hi: अचानक
+          gradual:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      intensity:
+        text:
+          bn: ব্যথা কতটা বেশি?
+          hi: दर्द कितना तेज़ है?
+        options:
+          mild:
+            bn: অল্প
+            hi: हल्का
+          moderate:
+            bn: মাঝারি
+            hi: न कम, न ज़्यादा
+          severe:
+            bn: খুব বেশি
+            hi: बहुत तेज़
+          varies:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी कम, कभी ज़्यादा
+      nature:
+        text:
+          bn: ব্যথাটা কেমন? সবসময় থাকে, না আসে-যায়?
+          hi: दर्द कैसा है? हर समय रहता है या आता-जाता है?
+        options:
+          continuous:
+            bn: সবসময় থাকে
+            hi: हर समय रहता है
+          comes-and-goes:
+            bn: আসে আর যায়
+            hi: आता-जाता है
+          always-there-but-sometimes-worse:
+            bn: সবসময় থাকে, মাঝে মাঝে বাড়ে
+            hi: हमेशा रहता है, कभी-कभी बढ़ता है
+      what-brings-it-on:
+        text:
+          bn: কী করলে ব্যথা শুরু হয় বা বাড়ে?
+          hi: क्या करने से दर्द शुरू होता है या बढ़ता है?
+        options:
+          activity:
+            bn: নড়াচড়া বা কাজ করলে
+            hi: चलने-फिरने या काम करने से
+          inactivity:
+            bn: বিশ্রামে বা বসে থাকলে
+            hi: आराम करने या बैठे रहने से
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      relieved-by:
+        text:
+          bn: কী করলে ব্যথা কমে?
+          hi: क्या करने से दर्द कम होता है?
+        options:
+          activity:
+            bn: নড়াচড়া বা কাজ করলে
+            hi: चलने-फिरने या काम करने से
+          inactivity:
+            bn: বিশ্রাম নিলে
+            hi: आराम करने से
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      any-associated-symptoms:
+        text:
+          bn: এর সাথে আর কোনো সমস্যা আছে কি?
+          hi: क्या इसके साथ कोई और तकलीफ़ भी है?
+        options:
+          h-o-injury:
+            bn: আগে চোট লেগেছিল
+            hi: पहले चोट लगी थी
+          swelling:
+            bn: ফোলা
+            hi: सूजन
+          inability-to-move:
+            bn: নাড়াতে পারি না
+            hi: हिला नहीं पाते
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+  teeth-pain:
+    name:
+      bn: দাঁতে ব্যথা
+      hi: दाँत का दर्द
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      where-did-it-start:
+        text:
+          bn: দাঁতের ব্যথা প্রথমে কোথায় শুরু হয়েছিল?
+          hi: दाँत का दर्द सबसे पहले कहाँ शुरू हुआ था?
+        options:
+          upper-rt:
+            bn: ওপরের ডান দিকের দাঁত
+            hi: ऊपर, दाईं तरफ़ के दाँत
+          upper-lt:
+            bn: ওপরের বাম দিকের দাঁত
+            hi: ऊपर, बाईं तरफ़ के दाँत
+          lower-rt:
+            bn: নিচের ডান দিকের দাঁত
+            hi: नीचे, दाईं तरफ़ के दाँत
+          lower-lt:
+            bn: নিচের বাম দিকের দাঁত
+            hi: नीचे, बाईं तरफ़ के दाँत
+      where-is-it-now:
+        text:
+          bn: ব্যথা এখন কোথায় আছে?
+          hi: दर्द अभी कहाँ है?
+        options:
+          did-not-move:
+            bn: একই জায়গায় আছে
+            hi: उसी जगह पर है
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      how-did-the-pain-start:
+        text:
+          bn: ব্যথা কীভাবে শুরু হয়েছিল?
+          hi: दर्द कैसे शुरू हुआ था?
+        options:
+          sudden:
+            bn: হঠাৎ
+            hi: अचानक
+          gradual:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      intensity:
+        text:
+          bn: ব্যথা কতটা বেশি?
+          hi: दर्द कितना तेज़ है?
+        options:
+          mild:
+            bn: অল্প
+            hi: हल्का
+          moderate:
+            bn: মাঝারি
+            hi: न कम, न ज़्यादा
+          severe:
+            bn: খুব বেশি
+            hi: बहुत तेज़
+          varies:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी कम, कभी ज़्यादा
+      nature:
+        text:
+          bn: ব্যথাটা কেমন? সবসময় থাকে, না আসে-যায়?
+          hi: दर्द कैसा है? हर समय रहता है या आता-जाता है?
+        options:
+          continuous:
+            bn: সবসময় থাকে
+            hi: हर समय रहता है
+          comes-and-goes:
+            bn: আসে আর যায়
+            hi: आता-जाता है
+          always-there-but-sometimes-worse:
+            bn: সবসময় থাকে, মাঝে মাঝে বাড়ে
+            hi: हमेशा रहता है, कभी-कभी बढ़ता है
+      what-brings-it-on:
+        text:
+          bn: কী করলে ব্যথা শুরু হয় বা বাড়ে?
+          hi: क्या करने से दर्द शुरू होता है या बढ़ता है?
+        options:
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      relieved-by:
+        text:
+          bn: কী করলে ব্যথা কমে?
+          hi: क्या करने से दर्द कम होता है?
+        options:
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      any-associated-symptoms:
+        text:
+          bn: এর সাথে আর কোনো সমস্যা আছে কি?
+          hi: क्या इसके साथ कोई और तकलीफ़ भी है?
+        options:
+          h-o-injury:
+            bn: আগে চোট লেগেছিল
+            hi: पहले चोट लगी थी
+          bad-smell:
+            bn: মুখে দুর্গন্ধ
+            hi: मुँह से बदबू
+          swelling-in-gum:
+            bn: মাড়ি ফোলা
+            hi: मसूड़ों में सूजन
+          bleeding-from-gum:
+            bn: মাড়ি দিয়ে রক্ত পড়া
+            hi: मसूड़ों से खून आना
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+  period-problem:
+    name:
+      bn: মাসিকের সমস্যা
+      hi: माहवारी (पीरियड) की समस्या
+    questions:
+      married:
+        text:
+          bn: আপনি কি বিবাহিত?
+          hi: क्या आपकी शादी हो चुकी है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      date-of-lmp:
+        text:
+          bn: আপনার শেষ মাসিক কোন তারিখে শুরু হয়েছিল?
+          hi: आपकी पिछली माहवारी किस तारीख को शुरू हुई थी?
+        options: {}
+      duration-of-period:
+        text:
+          bn: আপনার মাসিক কতদিন ধরে চলে?
+          hi: आपकी माहवारी कितने दिन चलती है?
+        options:
+          regular:
+            bn: প্রতিবার সমান দিন
+            hi: हर बार उतने ही दिन
+          varies:
+            bn: কম-বেশি হয়
+            hi: कम-ज़्यादा होता है
+      interval-between-periods:
+        text:
+          bn: মাসিক কতদিন পরপর হয়?
+          hi: माहवारी कितने दिन बाद दोबारा आती है?
+        options:
+          regular:
+            bn: প্রতিবার সমান দিন পরপর
+            hi: हर बार उतने ही दिन बाद
+          varies:
+            bn: কম-বেশি হয়
+            hi: कम-ज़्यादा होता है
+      flow:
+        text:
+          bn: মাসিকের সময় রক্ত কতটা যায়?
+          hi: माहवारी में खून कितना आता है?
+        options:
+          normal:
+            bn: ঠিকঠাক
+            hi: ठीक-ठाक
+          heavy:
+            bn: বেশি
+            hi: ज़्यादा
+          low:
+            bn: কম
+            hi: कम
+          varies:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी कम, कभी ज़्यादा
+      no-of-children:
+        text:
+          bn: আপনার কটি সন্তান আছে?
+          hi: आपके कितने बच्चे हैं?
+        options: {}
+      no-of-pregnancies:
+        text:
+          bn: আপনি মোট কতবার গর্ভবতী হয়েছেন? (বাচ্চা নষ্ট হয়ে যাওয়া সহ)
+          hi: आप कुल कितनी बार गर्भवती (पेट से) हुई हैं? (बच्चा गिर जाने वाली बार भी गिनें)
+        options: {}
+      age-at-first-childbirth:
+        text:
+          bn: প্রথম সন্তান হওয়ার সময় আপনার বয়স কত ছিল?
+          hi: पहला बच्चा होने के समय आपकी उम्र कितनी थी?
+        options: {}
+      last-childbirth:
+        text:
+          bn: আপনার শেষ সন্তান কবে হয়েছে?
+          hi: आपका आखिरी बच्चा कब हुआ था?
+        options: {}
+      contraception-practice:
+        text:
+          bn: বাচ্চা না হওয়ার জন্য আপনি কি কোনো উপায় (যেমন বড়ি, কপার-টি) ব্যবহার করেন?
+          hi: क्या आप बच्चा न होने के लिए कोई तरीका (जैसे गोली, कॉपर-टी) इस्तेमाल करती हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      age-of-onset:
+        text:
+          bn: প্রথম মাসিক কত বছর বয়সে শুরু হয়েছিল?
+          hi: पहली माहवारी किस उम्र में शुरू हुई थी?
+        options:
+          not-started-yet:
+            bn: এখনো শুরু হয়নি
+            hi: अभी शुरू नहीं हुई
+          started-at:
+            bn: শুরু হয়েছে (বয়স বলুন)
+            hi: शुरू हो गई (उम्र बताएँ)
+      any-associated-symptoms:
+        text:
+          bn: এর সাথে আর কোনো সমস্যা আছে কি?
+          hi: क्या इसके साथ कोई और तकलीफ़ भी है?
+        options:
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+      pain:
+        text:
+          bn: মাসিকের সময় কি ব্যথা হয়?
+          hi: क्या माहवारी के समय दर्द होता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+  general-weakness:
+    name:
+      bn: শরীর দুর্বল লাগা
+      hi: शरीर में कमज़ोरी
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      appetite:
+        text:
+          bn: আপনার খিদে কেমন হচ্ছে?
+          hi: आपको भूख कैसी लगती है?
+        options:
+          normal:
+            bn: ঠিক আছে
+            hi: ठीक है
+          decreased:
+            bn: কমে গেছে
+            hi: कम हो गई है
+      weight:
+        text:
+          bn: আপনার ওজনে কি কোনো পরিবর্তন হয়েছে?
+          hi: क्या आपके वज़न में कोई बदलाव हुआ है?
+        options:
+          no-change:
+            bn: কোনো পরিবর্তন নেই
+            hi: कोई बदलाव नहीं
+          decreased:
+            bn: কমেছে
+            hi: कम हुआ है
+          increase:
+            bn: বেড়েছে
+            hi: बढ़ा है
+      abdominal-pain:
+        text:
+          bn: আপনার কি পেটে ব্যথা আছে?
+          hi: क्या आपके पेट में दर्द है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      chest-pain:
+        text:
+          bn: আপনার কি বুকে ব্যথা আছে?
+          hi: क्या आपके सीने में दर्द है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      fever:
+        text:
+          bn: আপনার কি জ্বর আছে?
+          hi: क्या आपको बुखार है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      cough:
+        text:
+          bn: আপনার কি কাশি আছে?
+          hi: क्या आपको खाँसी है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      diarrhoea:
+        text:
+          bn: আপনার কি পাতলা পায়খানা হচ্ছে?
+          hi: क्या आपको दस्त (पतला पाखाना) हो रहे हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      constipation:
+        text:
+          bn: আপনার কি কোষ্ঠকাঠিন্য আছে, মানে পায়খানা শক্ত হয় বা ঠিকমতো হয় না?
+          hi: क्या आपको कब्ज़ है, यानी पेट ठीक से साफ़ नहीं होता?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+  ulcer:
+    name:
+      bn: ঘা
+      hi: घाव
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      where:
+        text:
+          bn: ঘা-টা শরীরের কোথায় হয়েছে?
+          hi: घाव शरीर में कहाँ है?
+        options: {}
+      how-did-it-start:
+        text:
+          bn: ঘা-টা কীভাবে হয়েছিল?
+          hi: घाव कैसे हुआ था?
+        options:
+          injury:
+            bn: চোট লেগে
+            hi: चोट लगने से
+          of-its-own:
+            bn: নিজে থেকেই
+            hi: अपने आप
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      pain:
+        text:
+          bn: ঘা-তে কি ব্যথা আছে?
+          hi: क्या घाव में दर्द है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      surface:
+        text:
+          bn: ঘা-এর ওপরটা দেখতে কেমন?
+          hi: घाव ऊपर से कैसा दिखता है?
+        options:
+          clean:
+            bn: পরিষ্কার
+            hi: साफ़
+          dirty:
+            bn: নোংরা
+            hi: गंदा
+          pink:
+            bn: গোলাপি
+            hi: गुलाबी
+          black:
+            bn: কালো
+            hi: काला
+          green:
+            bn: সবুজ
+            hi: हरा
+          mixed:
+            bn: মেশানো রঙ
+            hi: मिला-जुला रंग
+      edges:
+        text:
+          bn: ঘা-এর কিনারা কেমন?
+          hi: घाव के किनारे कैसे हैं?
+        options:
+          raised:
+            bn: উঁচু
+            hi: उभरे हुए
+          flat-with-surface:
+            bn: চামড়ার সমান
+            hi: चमड़ी के बराबर
+      size:
+        text:
+          bn: ঘা-টা কত বড়?
+          hi: घाव कितना बड़ा है?
+        options: {}
+  boils:
+    name:
+      bn: ফোঁড়া
+      hi: फोड़ा
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      where:
+        text:
+          bn: ফোঁড়াটা শরীরের কোথায় হয়েছে?
+          hi: फोड़ा शरीर में कहाँ है?
+        options: {}
+      how-did-it-start:
+        text:
+          bn: ফোঁড়াটা কীভাবে হয়েছিল?
+          hi: फोड़ा कैसे हुआ था?
+        options:
+          injury:
+            bn: চোট লেগে
+            hi: चोट लगने से
+          of-its-own:
+            bn: নিজে থেকেই
+            hi: अपने आप
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      pain:
+        text:
+          bn: ফোঁড়ায় কি ব্যথা আছে?
+          hi: क्या फोड़े में दर्द है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      colour-of-skin-over-the-boil:
+        text:
+          bn: ফোঁড়ার ওপরের চামড়ার রঙ কেমন?
+          hi: फोड़े के ऊपर की चमड़ी का रंग कैसा है?
+        options:
+          red:
+            bn: লাল
+            hi: लाल
+          normal:
+            bn: বাকি চামড়ার মতো
+            hi: बाकी चमड़ी जैसा
+  abdominal-pain:
+    name:
+      bn: পেটে ব্যথা
+      hi: पेट में दर्द
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      where-did-it-start:
+        text:
+          bn: ব্যথাটা পেটের কোথায় শুরু হয়েছিল?
+          hi: दर्द पेट में कहाँ से शुरू हुआ था?
+        options:
+          upper-r:
+            bn: উপরে ডান দিকে
+            hi: ऊपर दायीं तरफ़
+          upper-c:
+            bn: উপরে মাঝখানে
+            hi: ऊपर बीच में
+          upper-l:
+            bn: উপরে বাম দিকে
+            hi: ऊपर बायीं तरफ़
+          middle-r:
+            bn: নাভির ডান পাশে
+            hi: नाभि के दायीं तरफ़
+          middle-c:
+            bn: নাভির কাছে
+            hi: नाभि के पास
+          middle-l:
+            bn: নাভির বাম পাশে
+            hi: नाभि के बायीं तरफ़
+          lower-r:
+            bn: নিচে ডান দিকে
+            hi: नीचे दायीं तरफ़
+          lower-c:
+            bn: নিচে মাঝখানে
+            hi: नीचे बीच में
+          lower-l:
+            bn: নিচে বাম দিকে
+            hi: नीचे बायीं तरफ़
+          all-over:
+            bn: পুরো পেটে
+            hi: पूरे पेट में
+      where-is-it-now:
+        text:
+          bn: এখন ব্যথাটা কোথায়?
+          hi: अब दर्द कहाँ है?
+        options:
+          did-not-move:
+            bn: একই জায়গায় আছে
+            hi: उसी जगह है
+          upper-r:
+            bn: উপরে ডান দিকে
+            hi: ऊपर दायीं तरफ़
+          upper-c:
+            bn: উপরে মাঝখানে
+            hi: ऊपर बीच में
+          upper-l:
+            bn: উপরে বাম দিকে
+            hi: ऊपर बायीं तरफ़
+          middle-r:
+            bn: নাভির ডান পাশে
+            hi: नाभि के दायीं तरफ़
+          middle-c:
+            bn: নাভির কাছে
+            hi: नाभि के पास
+          middle-l:
+            bn: নাভির বাম পাশে
+            hi: नाभि के बायीं तरफ़
+          lower-r:
+            bn: নিচে ডান দিকে
+            hi: नीचे दायीं तरफ़
+          lower-c:
+            bn: নিচে মাঝখানে
+            hi: नीचे बीच में
+          lower-l:
+            bn: নিচে বাম দিকে
+            hi: नीचे बायीं तरफ़
+          all-over:
+            bn: পুরো পেটে
+            hi: पूरे पेट में
+      how-did-the-pain-start:
+        text:
+          bn: ব্যথাটা কীভাবে শুরু হয়েছিল?
+          hi: दर्द कैसे शुरू हुआ था?
+        options:
+          sudden:
+            bn: হঠাৎ
+            hi: अचानक
+          gradual:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      intensity:
+        text:
+          bn: ব্যথাটা কতটা জোরে হচ্ছে?
+          hi: दर्द कितना तेज़ है?
+        options:
+          mild:
+            bn: হালকা
+            hi: हल्का
+          moderate:
+            bn: মাঝারি
+            hi: बीच का
+          severe:
+            bn: খুব বেশি
+            hi: बहुत तेज़
+          varies:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी कम, कभी ज़्यादा
+      nature:
+        text:
+          bn: ব্যথাটা কেমন — সবসময় থাকে, নাকি আসে আর যায়?
+          hi: दर्द कैसा है — हर समय रहता है या आता-जाता है?
+        options:
+          continuous:
+            bn: সবসময় থাকে
+            hi: हर समय रहता है
+          comes-and-goes:
+            bn: আসে আর যায়
+            hi: आता-जाता है
+          always-there-but-sometimes-worse:
+            bn: সবসময় থাকে, মাঝে মাঝে বাড়ে
+            hi: हमेशा रहता है, कभी-कभी बढ़ता है
+      what-brings-it-on:
+        text:
+          bn: কীসে ব্যথাটা শুরু হয় বা বাড়ে?
+          hi: किस वजह से दर्द शुरू होता है या बढ़ता है?
+        options:
+          food:
+            bn: খাবার খেলে
+            hi: खाना खाने से
+          empty-stomach:
+            bn: খালি পেটে
+            hi: खाली पेट
+          period:
+            bn: মাসিকের সময়
+            hi: माहवारी के समय
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      relieved-by:
+        text:
+          bn: কীসে ব্যথাটা কমে?
+          hi: किस चीज़ से दर्द कम होता है?
+        options:
+          food:
+            bn: খাবার খেলে
+            hi: खाना खाने से
+          vomiting:
+            bn: বমি হলে
+            hi: उल्टी होने से
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      any-associated-symptoms:
+        text:
+          bn: ব্যথার সঙ্গে আর কোনো সমস্যা আছে কি?
+          hi: दर्द के साथ कोई और परेशानी भी है?
+        options:
+          constipation:
+            bn: পায়খানা কষা
+            hi: कब्ज़
+          diarrohoea:
+            bn: পাতলা পায়খানা
+            hi: दस्त
+          vomiting:
+            bn: বমি
+            hi: उल्टी
+          loss-of-appetite:
+            bn: খিদে কমে গেছে
+            hi: भूख कम लगना
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+  fever:
+    name:
+      bn: জ্বর
+      hi: बुखार
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে জ্বর হচ্ছে?
+          hi: बुखार कितने दिनों से है?
+        options: {}
+      nature:
+        text:
+          bn: জ্বর কি রোজ আসে, একদিন ছাড়া একদিন, নাকি যখন-তখন?
+          hi: बुखार रोज़ आता है, एक दिन छोड़कर आता है, या कभी भी आ जाता है?
+        options:
+          everyday:
+            bn: রোজ
+            hi: रोज़
+          alternate:
+            bn: একদিন ছাড়া একদিন
+            hi: एक दिन छोड़कर
+          irregular:
+            bn: যখন-তখন, ঠিক নেই
+            hi: कभी भी, तय नहीं
+      type:
+        text:
+          bn: দিনের কোন সময়ে জ্বর থাকে?
+          hi: दिन में किस समय बुखार रहता है?
+        options:
+          all-day:
+            bn: সারাদিন
+            hi: पूरे दिन
+          part-of-day-morning:
+            bn: শুধু সকালে
+            hi: सिर्फ़ सुबह
+          part-of-day-evening:
+            bn: শুধু সন্ধ্যায়
+            hi: सिर्फ़ शाम को
+          part-of-day-night:
+            bn: শুধু রাতে
+            hi: सिर्फ़ रात को
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      how-much:
+        text:
+          bn: জ্বর কতটা ওঠে?
+          hi: बुखार कितना तेज़ होता है?
+        options:
+          low:
+            bn: অল্প জ্বর
+            hi: हल्का बुखार
+          high:
+            bn: বেশি জ্বর
+            hi: तेज़ बुखार
+          combined-high-and-low:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी हल्का, कभी तेज़
+          nil:
+            bn: এখন জ্বর নেই
+            hi: अभी बुखार नहीं
+      shivers:
+        text:
+          bn: জ্বরের সময় কি শীত করে কাঁপুনি হয়?
+          hi: क्या बुखार के साथ ठंड लगकर कंपकंपी होती है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      cough:
+        text:
+          bn: আপনার কি কাশি আছে?
+          hi: क्या आपको खाँसी है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      cough-with-bleeding:
+        text:
+          bn: কাশির সঙ্গে কি রক্ত আসে?
+          hi: क्या खाँसी के साथ खून आता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      pain:
+        text:
+          bn: শরীরে কোথাও কি ব্যথা আছে?
+          hi: क्या शरीर में कहीं दर्द है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+          if-yes-write-location:
+            bn: হ্যাঁ, কোথায় বলুন
+            hi: हाँ, जगह बताइए
+      general-weakness:
+        text:
+          bn: সারা শরীর কি দুর্বল লাগে?
+          hi: क्या पूरे शरीर में कमज़ोरी लगती है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      loss-of-weight:
+        text:
+          bn: আপনার ওজন কি কমে গেছে?
+          hi: क्या आपका वज़न कम हुआ है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      burning-frequency-in-urine:
+        text:
+          bn: প্রস্রাবে কি জ্বালা করে, বা বারবার প্রস্রাব পায়?
+          hi: क्या पेशाब में जलन होती है, या बार-बार पेशाब आता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+      what-causes-it:
+        text:
+          bn: আপনার কী মনে হয়, কীসে জ্বর আসে বা বাড়ে?
+          hi: आपको क्या लगता है, बुखार किस वजह से आता या बढ़ता है?
+        options: {}
+      what-relieves-it:
+        text:
+          bn: কীসে জ্বর কমে?
+          hi: किस चीज़ से बुखार कम होता है?
+        options: {}
+  acidity-indigestion:
+    name:
+      bn: অম্বল / বদহজম
+      hi: एसिडिटी / बदहज़मी
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      abdominal-pain:
+        text:
+          bn: পেটে কি ব্যথা হয়?
+          hi: क्या पेट में दर्द होता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      vomiting:
+        text:
+          bn: বমি হয় কি?
+          hi: क्या उल्टी होती है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      nausea:
+        text:
+          bn: বমি বমি ভাব হয় কি?
+          hi: क्या जी मिचलाता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      appetite:
+        text:
+          bn: আপনার খিদে কেমন হয়?
+          hi: आपको भूख कैसी लगती है?
+        options:
+          normal:
+            bn: আগের মতোই
+            hi: पहले जैसी
+          less:
+            bn: কম
+            hi: कम
+      constipation:
+        text:
+          bn: পায়খানা কি কষা বা শক্ত হয়, পরিষ্কার হয় না?
+          hi: क्या कब्ज़ है — पेट ठीक से साफ़ नहीं होता?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      diarrhoea:
+        text:
+          bn: পাতলা পায়খানা হচ্ছে কি?
+          hi: क्या दस्त (पतला पाखाना) हो रहे हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      what-causes-it:
+        text:
+          bn: কীসে অম্বল শুরু হয় বা বাড়ে?
+          hi: किस वजह से एसिडिटी शुरू होती या बढ़ती है?
+        options:
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      what-relieves-it:
+        text:
+          bn: কীসে আরাম হয়?
+          hi: किस चीज़ से आराम मिलता है?
+        options:
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      h-o-jaundice:
+        text:
+          bn: আগে কখনো জন্ডিস (ন্যাবা) হয়েছিল?
+          hi: क्या पहले कभी पीलिया हुआ था?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      h-o-alcohol-ingestion:
+        text:
+          bn: আপনি কি মদ খান, বা আগে খেতেন?
+          hi: क्या आप शराब पीते हैं, या पहले पीते थे?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      h-o-smoking:
+        text:
+          bn: আপনি কি বিড়ি-সিগারেট খান, বা আগে খেতেন?
+          hi: क्या आप बीड़ी-सिगरेट पीते हैं, या पहले पीते थे?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      change-of-weight:
+        text:
+          bn: ইদানীং আপনার ওজনে কি কোনো বদল হয়েছে?
+          hi: हाल में आपके वज़न में कोई बदलाव हुआ है?
+        options:
+          increase:
+            bn: বেড়েছে
+            hi: बढ़ा है
+          decrease:
+            bn: কমেছে
+            hi: घटा है
+          did-not-change:
+            bn: একই আছে
+            hi: वैसा ही है
+  throat-pain:
+    name:
+      bn: গলা ব্যথা
+      hi: गले में दर्द
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      where-did-it-start:
+        text:
+          bn: ব্যথাটা কোথায় শুরু হয়েছিল?
+          hi: दर्द कहाँ से शुरू हुआ था?
+        options:
+          back-of-mouth:
+            bn: মুখের পেছনে, গলার ভেতরে
+            hi: मुँह के पीछे, गले के अंदर
+          front-of-throat:
+            bn: গলার সামনের দিকে
+            hi: गले के आगे की तरफ़
+      where-is-it-now:
+        text:
+          bn: এখন ব্যথাটা কোথায়?
+          hi: अब दर्द कहाँ है?
+        options:
+          did-not-move:
+            bn: একই জায়গায় আছে
+            hi: उसी जगह है
+          other:
+            bn: অন্য জায়গায়
+            hi: कहीं और
+      how-did-the-pain-start:
+        text:
+          bn: ব্যথাটা কীভাবে শুরু হয়েছিল?
+          hi: दर्द कैसे शुरू हुआ था?
+        options:
+          sudden:
+            bn: হঠাৎ
+            hi: अचानक
+          gradual:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      intensity:
+        text:
+          bn: ব্যথাটা কতটা জোরে হচ্ছে?
+          hi: दर्द कितना तेज़ है?
+        options:
+          mild:
+            bn: হালকা
+            hi: हल्का
+          moderate:
+            bn: মাঝারি
+            hi: बीच का
+          severe:
+            bn: খুব বেশি
+            hi: बहुत तेज़
+          varies:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी कम, कभी ज़्यादा
+      nature:
+        text:
+          bn: ব্যথাটা কেমন — সবসময় থাকে, নাকি আসে আর যায়?
+          hi: दर्द कैसा है — हर समय रहता है या आता-जाता है?
+        options:
+          continuous:
+            bn: সবসময় থাকে
+            hi: हर समय रहता है
+          comes-and-goes:
+            bn: আসে আর যায়
+            hi: आता-जाता है
+          always-there-but-sometimes-worse:
+            bn: সবসময় থাকে, মাঝে মাঝে বাড়ে
+            hi: हमेशा रहता है, कभी-कभी बढ़ता है
+      what-brings-it-on:
+        text:
+          bn: কীসে ব্যথাটা শুরু হয় বা বাড়ে?
+          hi: किस वजह से दर्द शुरू होता है या बढ़ता है?
+        options:
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      relieved-by:
+        text:
+          bn: কীসে ব্যথাটা কমে?
+          hi: किस चीज़ से दर्द कम होता है?
+        options:
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      any-associated-symptoms:
+        text:
+          bn: ব্যথার সঙ্গে আর কোনো সমস্যা আছে কি?
+          hi: दर्द के साथ कोई और परेशानी भी है?
+        options:
+          cough:
+            bn: কাশি
+            hi: खाँसी
+          fever:
+            bn: জ্বর
+            hi: बुखार
+          change-of-voice:
+            bn: গলার স্বর বদলে গেছে
+            hi: आवाज़ बदल गई
+          difficulty-in-swallowing:
+            bn: গিলতে কষ্ট
+            hi: निगलने में तकलीफ़
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+  injury:
+    name:
+      bn: চোট / আঘাত
+      hi: चोट
+    questions:
+      where-is-it:
+        text:
+          bn: চোটটা শরীরের কোথায় লেগেছে?
+          hi: चोट शरीर में कहाँ लगी है?
+        options: {}
+      how-sustained:
+        text:
+          bn: চোটটা কীভাবে লাগল?
+          hi: चोट कैसे लगी?
+        options:
+          fall-at-home:
+            bn: বাড়িতে পড়ে গিয়ে
+            hi: घर में गिरकर
+          fall-on-road:
+            bn: রাস্তায় পড়ে গিয়ে
+            hi: सड़क पर गिरकर
+          fall-from-height:
+            bn: উঁচু থেকে পড়ে
+            hi: ऊँचाई से गिरकर
+          hit-by-car:
+            bn: গাড়ির ধাক্কায়
+            hi: गाड़ी की टक्कर से
+          hit-by-bike:
+            bn: মোটরবাইকের ধাক্কায়
+            hi: मोटरसाइकिल की टक्कर से
+          hit-by-cycle:
+            bn: সাইকেলের ধাক্কায়
+            hi: साइकिल की टक्कर से
+          crushed-in-machine:
+            bn: মেশিনে চাপা পড়ে
+            hi: मशीन में दबकर
+          cut:
+            bn: কেটে গিয়ে
+            hi: कटकर
+          violence:
+            bn: মারধরে
+            hi: मारपीट में
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      when-sustained:
+        text:
+          bn: চোটটা কবে লেগেছে?
+          hi: चोट कब लगी?
+        options: {}
+      problem:
+        text:
+          bn: এখন কী অসুবিধা হচ্ছে?
+          hi: अभी क्या परेशानी हो रही है?
+        options:
+          can-t-walk:
+            bn: হাঁটতে পারছি না
+            hi: चल नहीं पा रहे
+          can-t-move:
+            bn: নাড়াতে পারছি না
+            hi: हिला नहीं पा रहे
+          pain:
+            bn: ব্যথা
+            hi: दर्द
+      any-bleeding:
+        text:
+          bn: রক্ত পড়েছে বা পড়ছে কি?
+          hi: क्या खून निकला है या निकल रहा है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+  bleeding-with-stool:
+    name:
+      bn: পায়খানার সঙ্গে রক্ত
+      hi: पाखाने के साथ खून
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      colour:
+        text:
+          bn: রক্তের রং কেমন?
+          hi: खून का रंग कैसा है?
+        options:
+          bright-red:
+            bn: টকটকে লাল
+            hi: चमकीला लाल
+          dark-red:
+            bn: কালচে লাল
+            hi: गहरा लाल
+      amount:
+        text:
+          bn: কতটা রক্ত যায়?
+          hi: कितना खून आता है?
+        options:
+          lot:
+            bn: অনেকটা
+            hi: बहुत सारा
+          drops:
+            bn: কয়েক ফোঁটা
+            hi: कुछ बूँदें
+      pain-during-passing-stool:
+        text:
+          bn: পায়খানা করার সময় কি ব্যথা হয়?
+          hi: क्या पाखाना करते समय दर्द होता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      change-in-bowel-habit:
+        text:
+          bn: পায়খানার অভ্যাসে কি কোনো বদল হয়েছে — যেমন কতবার যান বা কেমন হয়?
+          hi: क्या पाखाने की आदत में कोई बदलाव आया है — जैसे कितनी बार जाते हैं या कैसा होता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      constipation:
+        text:
+          bn: পায়খানা কি কষা বা শক্ত হয়, পরিষ্কার হয় না?
+          hi: क्या कब्ज़ है — पेट ठीक से साफ़ नहीं होता?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      diarrhoea:
+        text:
+          bn: পাতলা পায়খানা হচ্ছে কি?
+          hi: क्या दस्त (पतला पाखाना) हो रहे हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+  particular-weakness:
+    name:
+      bn: শরীরের কোনো অংশে দুর্বলতা
+      hi: शरीर के किसी हिस्से में कमज़ोरी
+    questions:
+      where:
+        text:
+          bn: শরীরের কোন অংশে দুর্বলতা লাগছে?
+          hi: शरीर के किस हिस्से में कमज़ोरी है?
+        options: {}
+      duration:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      h-o-injury:
+        text:
+          bn: ওখানে কি আগে কোনো চোট লেগেছিল?
+          hi: क्या वहाँ पहले कोई चोट लगी थी?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      how-did-it-start:
+        text:
+          bn: দুর্বলতাটা কীভাবে শুরু হয়েছিল?
+          hi: कमज़ोरी कैसे शुरू हुई थी?
+        options: {}
+      progress:
+        text:
+          bn: এখন দুর্বলতা কেমন — কমছে, একই আছে, নাকি বাড়ছে?
+          hi: अब कमज़ोरी कैसी है — ठीक हो रही है, वैसी ही है, या बढ़ रही है?
+        options:
+          improving:
+            bn: ভালো হচ্ছে
+            hi: ठीक हो रही है
+          same-as-before:
+            bn: আগের মতোই
+            hi: पहले जैसी
+          worsening:
+            bn: বাড়ছে
+            hi: बढ़ रही है
+  abdomen-swelling:
+    name:
+      bn: পেটে ফোলা
+      hi: पेट में सूजन
+    questions:
+      where-is-it:
+        text:
+          bn: ফোলাটা পেটের কোথায়?
+          hi: सूजन पेट में कहाँ है?
+        options:
+          upper-r:
+            bn: উপরে ডান দিকে
+            hi: ऊपर दायीं तरफ
+          upper-c:
+            bn: উপরে মাঝখানে
+            hi: ऊपर बीच में
+          upper-l:
+            bn: উপরে বাম দিকে
+            hi: ऊपर बायीं तरफ
+          middle-r:
+            bn: মাঝে ডান দিকে
+            hi: बीच में दायीं तरफ
+          middle-c:
+            bn: একদম মাঝখানে
+            hi: बिल्कुल बीच में
+          middle-l:
+            bn: মাঝে বাম দিকে
+            hi: बीच में बायीं तरफ
+          lower-r:
+            bn: নিচে ডান দিকে
+            hi: नीचे दायीं तरफ
+          lower-c:
+            bn: নিচে মাঝখানে
+            hi: नीचे बीच में
+          lower-l:
+            bn: নিচে বাম দিকে
+            hi: नीचे बायीं तरफ
+          all-over:
+            bn: পুরো পেটে
+            hi: पूरे पेट में
+      how-many:
+        text:
+          bn: কতগুলো ফোলা বা গাঁট আছে?
+          hi: कितनी जगह सूजन या गांठ है?
+        options: {}
+      duration:
+        text:
+          bn: কতদিন ধরে এই ফোলা আছে?
+          hi: यह सूजन कितने दिनों से है?
+        options: {}
+      how-did-it-start:
+        text:
+          bn: ফোলাটা কীভাবে শুরু হয়েছিল?
+          hi: सूजन कैसे शुरू हुई थी?
+        options:
+          gradually:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          suddenly:
+            bn: হঠাৎ করে
+            hi: अचानक
+      painful-or-not:
+        text:
+          bn: ফোলা জায়গায় কি ব্যথা হয়?
+          hi: क्या सूजन वाली जगह में दर्द होता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      has-it-changed-in-size:
+        text:
+          bn: ফোলাটা কি আগের চেয়ে বড় বা ছোট হয়েছে?
+          hi: क्या सूजन पहले से बड़ी या छोटी हुई है?
+        options:
+          no-change:
+            bn: বদলায়নি
+            hi: नहीं बदली
+          increase:
+            bn: বেড়েছে
+            hi: बढ़ गई है
+          decrease:
+            bn: কমেছে
+            hi: घट गई है
+      any-change-in-colour-of-skin:
+        text:
+          bn: ফোলার উপরের চামড়ার রং কি বদলেছে?
+          hi: क्या सूजन के ऊपर की चमड़ी का रंग बदला है?
+        options:
+          no-change:
+            bn: বদলায়নি
+            hi: नहीं बदला
+          change:
+            bn: বদলেছে
+            hi: बदल गया है
+      any-other-symptom:
+        text:
+          bn: এর জন্য আর কোনো অসুবিধা হচ্ছে কি?
+          hi: क्या इसकी वजह से कोई और परेशानी हो रही है?
+        options:
+          difficulty-in-work:
+            bn: কাজ করতে অসুবিধা
+            hi: काम करने में दिक्कत
+          difficulty-in-movement:
+            bn: চলাফেরায় অসুবিধা
+            hi: चलने-फिरने में दिक्कत
+      any-history-of-injury:
+        text:
+          bn: পেটে কি কখনো চোট লেগেছিল?
+          hi: क्या पेट पर कभी चोट लगी थी?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      general-abdominal-pain:
+        text:
+          bn: ফোলা ছাড়াও কি পেটে ব্যথা হয়?
+          hi: सूजन के अलावा क्या पेट में दर्द होता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      change-in-weight:
+        text:
+          bn: আপনার ওজন কি বেড়েছে বা কমেছে?
+          hi: क्या आपका वज़न बढ़ा या घटा है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      bowel-habit:
+        text:
+          bn: পায়খানা কেমন হচ্ছে?
+          hi: टट्टी (पखाना) कैसी हो रही है?
+        options:
+          no-change:
+            bn: আগের মতোই
+            hi: पहले जैसी
+          constipation:
+            bn: কষা পায়খানা
+            hi: कब्ज़
+          diarrhoea:
+            bn: পাতলা পায়খানা
+            hi: दस्त
+      yellow-colour-in-urine:
+        text:
+          bn: প্রস্রাব কি বেশি হলুদ হচ্ছে?
+          hi: क्या पेशाब ज़्यादा पीला आ रहा है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      vomiting:
+        text:
+          bn: বমি হচ্ছে কি?
+          hi: क्या उल्टी हो रही है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      appetite:
+        text:
+          bn: খিদে কেমন পাচ্ছে?
+          hi: भूख कैसी लगती है?
+        options:
+          normal:
+            bn: ঠিক আছে
+            hi: ठीक है
+          decreased:
+            bn: কমে গেছে
+            hi: कम हो गई है
+          increased:
+            bn: বেড়ে গেছে
+            hi: बढ़ गई है
+      fluctuates-in-size:
+        text:
+          bn: ফোলাটা কি কখনো বড় কখনো ছোট হয়?
+          hi: क्या सूजन कभी बड़ी, कभी छोटी होती है?
+        options:
+          increase-on-coughing-straining:
+            bn: কাশলে বা কোঁত দিলে বাড়ে
+            hi: खाँसने या ज़ोर लगाने पर बढ़ती है
+          nil:
+            bn: না, বদলায় না
+            hi: नहीं, नहीं बदलती
+  headache:
+    name:
+      bn: মাথাব্যথা
+      hi: सिरदर्द
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে মাথাব্যথা হচ্ছে?
+          hi: सिरदर्द कितने दिनों से है?
+        options: {}
+      where-did-it-start:
+        text:
+          bn: ব্যথাটা মাথার কোথায় শুরু হয়েছিল?
+          hi: दर्द सिर में कहाँ से शुरू हुआ था?
+        options:
+          front-r:
+            bn: কপালের ডান দিকে
+            hi: माथे की दायीं तरफ
+          front-l:
+            bn: কপালের বাম দিকে
+            hi: माथे की बायीं तरफ
+          back-r:
+            bn: মাথার পিছনে ডান দিকে
+            hi: सिर के पीछे दायीं तरफ
+          back-l:
+            bn: মাথার পিছনে বাম দিকে
+            hi: सिर के पीछे बायीं तरफ
+          middle-c:
+            bn: মাথার মাঝখানে
+            hi: सिर के बीच में
+          all-over:
+            bn: পুরো মাথায়
+            hi: पूरे सिर में
+      where-is-it-now:
+        text:
+          bn: এখন ব্যথাটা কোথায়?
+          hi: अब दर्द कहाँ है?
+        options:
+          did-not-move:
+            bn: একই জায়গায় আছে
+            hi: वहीं पर है
+          front-r:
+            bn: কপালের ডান দিকে
+            hi: माथे की दायीं तरफ
+          front-l:
+            bn: কপালের বাম দিকে
+            hi: माथे की बायीं तरफ
+          back-r:
+            bn: মাথার পিছনে ডান দিকে
+            hi: सिर के पीछे दायीं तरफ
+          back-l:
+            bn: মাথার পিছনে বাম দিকে
+            hi: सिर के पीछे बायीं तरफ
+          middle-c:
+            bn: মাথার মাঝখানে
+            hi: सिर के बीच में
+          all-over:
+            bn: পুরো মাথায়
+            hi: पूरे सिर में
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      how-did-the-pain-start:
+        text:
+          bn: ব্যথাটা কীভাবে শুরু হয়েছিল?
+          hi: दर्द कैसे शुरू हुआ था?
+        options:
+          sudden:
+            bn: হঠাৎ
+            hi: अचानक
+          gradual:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      intensity:
+        text:
+          bn: ব্যথাটা কতটা বেশি?
+          hi: दर्द कितना तेज़ है?
+        options:
+          mild:
+            bn: অল্প
+            hi: हल्का
+          moderate:
+            bn: মাঝারি
+            hi: बीच का
+          severe:
+            bn: খুব বেশি
+            hi: बहुत तेज़
+          varies:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी कम, कभी ज़्यादा
+      nature:
+        text:
+          bn: ব্যথাটা কি সবসময় থাকে, নাকি আসে-যায়?
+          hi: दर्द हर समय रहता है या आता-जाता है?
+        options:
+          continuous:
+            bn: সবসময় থাকে
+            hi: हर समय रहता है
+          comes-and-goes:
+            bn: আসে আর যায়
+            hi: आता-जाता है
+          always-there-but-sometimes-worse:
+            bn: সবসময় থাকে, মাঝে মাঝে বাড়ে
+            hi: हमेशा रहता है, कभी-कभी बढ़ता है
+      what-brings-it-on:
+        text:
+          bn: কী হলে ব্যথা শুরু হয়?
+          hi: किस वजह से दर्द शुरू होता है?
+        options:
+          injury:
+            bn: চোট লাগলে
+            hi: चोट लगने से
+          bright-light:
+            bn: চড়া আলোয়
+            hi: तेज़ रोशनी से
+          loud-noise:
+            bn: জোরে আওয়াজে
+            hi: तेज़ आवाज़ से
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      relieved-by:
+        text:
+          bn: কী করলে ব্যথা কমে?
+          hi: किस चीज़ से दर्द कम होता है?
+        options:
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      any-associated-symptoms:
+        text:
+          bn: মাথাব্যথার সঙ্গে আর কোনো সমস্যা হয় কি?
+          hi: सिरदर्द के साथ और कोई परेशानी होती है?
+        options:
+          vomiting:
+            bn: বমি
+            hi: उल्टी
+          vertigo:
+            bn: মাথা ঘোরা
+            hi: चक्कर आना
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+  dizziness:
+    name:
+      bn: মাথা ঘোরা
+      hi: चक्कर आना
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে মাথা ঘুরছে?
+          hi: चक्कर कितने दिनों से आ रहे हैं?
+        options: {}
+      nature:
+        text:
+          bn: মাথা ঘোরা কি রোজ হয়, নাকি কিছু কিছু দিন?
+          hi: चक्कर रोज़ आते हैं या कुछ ही दिन?
+        options:
+          everyday:
+            bn: রোজ
+            hi: रोज़
+          some-days:
+            bn: কিছু কিছু দিন
+            hi: कुछ दिन
+      type:
+        text:
+          bn: দিনের কোন সময়ে মাথা ঘোরে?
+          hi: दिन में किस समय चक्कर आते हैं?
+        options:
+          whole-day:
+            bn: সারাদিন
+            hi: पूरे दिन
+          part-of-day-morning:
+            bn: শুধু সকালে
+            hi: सिर्फ़ सुबह
+          part-of-day-evening:
+            bn: শুধু সন্ধ্যায়
+            hi: सिर्फ़ शाम को
+          part-of-day-night:
+            bn: শুধু রাতে
+            hi: सिर्फ़ रात को
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      what-causes-it:
+        text:
+          bn: কী হলে মাথা ঘোরা শুরু হয়?
+          hi: किस वजह से चक्कर आने लगते हैं?
+        options: {}
+      what-relieves-it:
+        text:
+          bn: কী করলে মাথা ঘোরা কমে?
+          hi: किस चीज़ से चक्कर कम होते हैं?
+        options: {}
+      relation-with-position:
+        text:
+          bn: কখন মাথা বেশি ঘোরে?
+          hi: चक्कर कब ज़्यादा आते हैं?
+        options:
+          lying-down:
+            bn: শুয়ে থাকলে
+            hi: लेटने पर
+          standing-up:
+            bn: উঠে দাঁড়ালে
+            hi: खड़े होने पर
+          moving-neck:
+            bn: ঘাড় নাড়লে
+            hi: गर्दन घुमाने पर
+          opening-eyes:
+            bn: চোখ খুললে
+            hi: आँखें खोलने पर
+          none-others:
+            bn: কিছু না / অন্য কিছু
+            hi: कुछ नहीं / कुछ और
+      h-o-fainting:
+        text:
+          bn: আপনি কি কখনো অজ্ঞান হয়ে গিয়েছিলেন?
+          hi: क्या आप कभी बेहोश हुए हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      h-o-fall:
+        text:
+          bn: মাথা ঘুরে কি কখনো পড়ে গিয়েছিলেন?
+          hi: क्या चक्कर आने से आप कभी गिरे हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      any-associated-symptoms:
+        text:
+          bn: মাথা ঘোরার সঙ্গে আর কোনো সমস্যা হয় কি?
+          hi: चक्कर के साथ और कोई परेशानी होती है?
+        options:
+          vomiting:
+            bn: বমি
+            hi: उल्टी
+          chest-pain:
+            bn: বুকে ব্যথা
+            hi: सीने में दर्द
+          breathlessness:
+            bn: শ্বাসকষ্ট
+            hi: साँस फूलना
+          pain-in-ear:
+            bn: কানে ব্যথা
+            hi: कान में दर्द
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+      vision:
+        text:
+          bn: চোখে কেমন দেখছেন?
+          hi: आँखों से कैसा दिखाई देता है?
+        options:
+          all-right:
+            bn: ঠিক আছে
+            hi: ठीक है
+          diminished:
+            bn: কম দেখছি
+            hi: कम दिखता है
+      hearing:
+        text:
+          bn: কানে কেমন শুনছেন?
+          hi: कानों से कैसा सुनाई देता है?
+        options:
+          normal:
+            bn: ঠিক আছে
+            hi: ठीक है
+          less:
+            bn: কম শুনছি
+            hi: कम सुनाई देता है
+  scrotal-pain:
+    name:
+      bn: অণ্ডকোষে ব্যথা
+      hi: अंडकोष में दर्द
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে অণ্ডকোষে ব্যথা হচ্ছে?
+          hi: अंडकोष में दर्द कितने दिनों से है?
+        options: {}
+      where-did-it-start:
+        text:
+          bn: ব্যথা কোন দিকে শুরু হয়েছিল?
+          hi: दर्द किस तरफ़ शुरू हुआ था?
+        options:
+          left:
+            bn: বাম দিকে
+            hi: बायीं तरफ
+          right:
+            bn: ডান দিকে
+            hi: दायीं तरफ
+          both:
+            bn: দুই দিকেই
+            hi: दोनों तरफ
+      where-is-it-now:
+        text:
+          bn: এখন ব্যথাটা কোথায়?
+          hi: अब दर्द कहाँ है?
+        options:
+          has-not-moved:
+            bn: একই জায়গায় আছে
+            hi: वहीं पर है
+          spread-to-groin:
+            bn: কুঁচকিতে ছড়িয়েছে
+            hi: जांघ के जोड़ तक फैल गया
+      how-did-the-pain-start:
+        text:
+          bn: ব্যথাটা কীভাবে শুরু হয়েছিল?
+          hi: दर्द कैसे शुरू हुआ था?
+        options:
+          sudden:
+            bn: হঠাৎ
+            hi: अचानक
+          gradual:
+            bn: ধীরে ধীরে
+            hi: धीरे-धीरे
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      intensity:
+        text:
+          bn: ব্যথাটা কতটা বেশি?
+          hi: दर्द कितना तेज़ है?
+        options:
+          mild:
+            bn: অল্প
+            hi: हल्का
+          moderate:
+            bn: মাঝারি
+            hi: बीच का
+          severe:
+            bn: খুব বেশি
+            hi: बहुत तेज़
+          varies:
+            bn: কখনো কম, কখনো বেশি
+            hi: कभी कम, कभी ज़्यादा
+      nature:
+        text:
+          bn: ব্যথাটা কি সবসময় থাকে, নাকি আসে-যায়?
+          hi: दर्द हर समय रहता है या आता-जाता है?
+        options:
+          continuous:
+            bn: সবসময় থাকে
+            hi: हर समय रहता है
+          comes-and-goes:
+            bn: আসে আর যায়
+            hi: आता-जाता है
+          always-there-but-sometimes-worse:
+            bn: সবসময় থাকে, মাঝে মাঝে বাড়ে
+            hi: हमेशा रहता है, कभी-कभी बढ़ता है
+      what-brings-it-on:
+        text:
+          bn: কী হলে ব্যথা শুরু হয়?
+          hi: किस वजह से दर्द शुरू होता है?
+        options:
+          injury:
+            bn: চোট লাগলে
+            hi: चोट लगने से
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      relieved-by:
+        text:
+          bn: কী করলে ব্যথা কমে?
+          hi: किस चीज़ से दर्द कम होता है?
+        options:
+          rest:
+            bn: বিশ্রাম নিলে
+            hi: आराम करने से
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      any-associated-symptoms:
+        text:
+          bn: ব্যথার সঙ্গে আর কোনো সমস্যা হয় কি?
+          hi: दर्द के साथ और कोई परेशानी होती है?
+        options:
+          swelling:
+            bn: ফুলে যাওয়া
+            hi: सूजन
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          dysuria:
+            bn: প্রস্রাবে জ্বালা
+            hi: पेशाब में जलन
+          others-2:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+  burning-or-frequency-of-urine:
+    name:
+      bn: প্রস্রাবে জ্বালা বা বারবার প্রস্রাব
+      hi: पेशाब में जलन या बार-बार पेशाब
+    questions:
+      how-long-have-you-felt-the-symptoms:
+        text:
+          bn: কতদিন ধরে এই সমস্যা হচ্ছে?
+          hi: यह परेशानी कितने दिनों से है?
+        options: {}
+      no-of-times-day:
+        text:
+          bn: দিনে কতবার প্রস্রাব করতে যান?
+          hi: दिन में कितनी बार पेशाब करने जाते हैं?
+        options: {}
+      nature-of-frequency:
+        text:
+          bn: কখন বেশি বার প্রস্রাব পায়?
+          hi: पेशाब कब ज़्यादा बार आता है?
+        options:
+          more-at-night:
+            bn: রাতে বেশি
+            hi: रात में ज़्यादा
+          all-day:
+            bn: সারাদিন
+            hi: पूरे दिन
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      nature-of-burning:
+        text:
+          bn: জ্বালাটা কখন হয়?
+          hi: जलन कब होती है?
+        options:
+          only-at-the-beginning:
+            bn: শুধু শুরুতে
+            hi: सिर्फ़ शुरू में
+          all-through-passing-urine:
+            bn: প্রস্রাবের পুরো সময়
+            hi: पेशाब करते पूरे समय
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      colour-of-urine:
+        text:
+          bn: প্রস্রাবের রং কেমন?
+          hi: पेशाब का रंग कैसा है?
+        options:
+          normal:
+            bn: ঠিক আছে
+            hi: ठीक है
+          dark-yellow:
+            bn: গাঢ় হলুদ
+            hi: गहरा पीला
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      is-there-any-fever:
+        text:
+          bn: আপনার কি জ্বর আছে?
+          hi: क्या आपको बुखार है?
+        options:
+          yes-refer-to-fever-questions-no:
+            bn: হ্যাঁ / না
+            hi: हाँ / नहीं
+      any-blood-in-urine:
+        text:
+          bn: প্রস্রাবের সঙ্গে কি রক্ত যায়?
+          hi: क्या पेशाब में खून आता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      can-you-hold-urine:
+        text:
+          bn: প্রস্রাব পেলে কি কিছুক্ষণ চেপে রাখতে পারেন?
+          hi: पेशाब लगने पर क्या आप कुछ देर रोक पाते हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      how-is-the-stream:
+        text:
+          bn: প্রস্রাবের ধারা কেমন?
+          hi: पेशाब की धार कैसी है?
+        options:
+          as-before:
+            bn: আগের মতো
+            hi: पहले जैसी
+          weak:
+            bn: জোর কম
+            hi: कमज़ोर
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+  diarrhoea:
+    name:
+      bn: পাতলা পায়খানা
+      hi: दस्त
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে পাতলা পায়খানা হচ্ছে?
+          hi: दस्त कितने दिनों से हो रहे हैं?
+        options: {}
+      stool-type:
+        text:
+          bn: পায়খানা কেমন হচ্ছে?
+          hi: टट्टी कैसी हो रही है?
+        options:
+          watery:
+            bn: জলের মতো
+            hi: पानी जैसी
+          soft:
+            bn: নরম
+            hi: नरम
+          ill-formed:
+            bn: ভাঙা ভাঙা
+            hi: बिखरी-बिखरी
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+      nature:
+        text:
+          bn: পাতলা পায়খানা কি রোজ হয়, নাকি কিছু কিছু দিন?
+          hi: दस्त रोज़ होते हैं या कुछ ही दिन?
+        options:
+          everyday:
+            bn: রোজ
+            hi: रोज़
+          some-days:
+            bn: কিছু কিছু দিন
+            hi: कुछ दिन
+      frequency:
+        text:
+          bn: দিনে কতবার পায়খানা হচ্ছে?
+          hi: दिन में कितनी बार दस्त हो रहे हैं?
+        options: {}
+      with-blood:
+        text:
+          bn: পায়খানার সঙ্গে কি রক্ত যাচ্ছে?
+          hi: क्या टट्टी में खून आ रहा है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      any-associated-symptoms:
+        text:
+          bn: পাতলা পায়খানার সঙ্গে আর কোনো সমস্যা আছে কি?
+          hi: दस्त के साथ और कोई परेशानी है?
+        options:
+          abdominal-pain:
+            bn: পেটে ব্যথা
+            hi: पेट में दर्द
+          vomiting:
+            bn: বমি
+            hi: उल्टी
+          fever:
+            bn: জ্বর
+            hi: बुखार
+          others:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+      relation-with-food:
+        text:
+          bn: খাওয়ার সঙ্গে কি এর কোনো যোগ আছে, যেমন খেলেই পায়খানা পায়?
+          hi: क्या इसका खाने से कोई संबंध है, जैसे खाना खाते ही दस्त लगना?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      any-current-medication:
+        text:
+          bn: আপনি কি এখন কোনো ওষুধ খাচ্ছেন?
+          hi: क्या आप अभी कोई दवा ले रहे हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+  yellow-urine:
+    name:
+      bn: হলুদ প্রস্রাব
+      hi: पीला पेशाब
+    questions:
+      duration:
+        text:
+          bn: কতদিন ধরে প্রস্রাব হলুদ হচ্ছে?
+          hi: पेशाब कितने दिनों से पीला आ रहा है?
+        options: {}
+      abdominal-pain:
+        text:
+          bn: পেটে কি ব্যথা আছে?
+          hi: क्या पेट में दर्द है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      fever:
+        text:
+          bn: জ্বর আছে কি?
+          hi: क्या बुखार है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      colour-of-stool:
+        text:
+          bn: পায়খানার রং কেমন?
+          hi: टट्टी का रंग कैसा है?
+        options:
+          normal:
+            bn: আগের মতোই
+            hi: पहले जैसा
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+      burning-with-urine:
+        text:
+          bn: প্রস্রাব করার সময় কি জ্বালা করে?
+          hi: क्या पेशाब करते समय जलन होती है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      general-weakness:
+        text:
+          bn: শরীর কি দুর্বল লাগে?
+          hi: क्या शरीर में कमज़ोरी लगती है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+  skin-rash:
+    name:
+      bn: চামড়ায় ফুসকুড়ি বা দাগ
+      hi: त्वचा पर दाने या चकत्ते
+    questions:
+      where:
+        text:
+          bn: ফুসকুড়ি বা দাগ শরীরের কোথায় হয়েছে?
+          hi: दाने या चकत्ते शरीर में कहाँ हैं?
+        options: {}
+      size:
+        text:
+          bn: দাগটা কত বড়?
+          hi: चकत्ता कितना बड़ा है?
+        options:
+          size-in-of-cm-x-cm-if-single:
+            bn: একটা হলে মাপ (সেমি x সেমি)
+            hi: एक हो तो नाप (सेमी x सेमी)
+      how-many:
+        text:
+          bn: কতগুলো আছে?
+          hi: कितने हैं?
+        options:
+          single:
+            bn: একটা
+            hi: एक
+          multiple:
+            bn: অনেকগুলো
+            hi: कई
+          multiple-patches:
+            bn: অনেকগুলো ছোপ
+            hi: कई चकत्ते
+      surface:
+        text:
+          bn: দাগের উপরটা ছুঁলে কেমন লাগে?
+          hi: दाने या चकत्ते को छूने पर कैसा लगता है?
+        options:
+          smooth:
+            bn: সমান, মোলায়েম
+            hi: चिकना
+          rough:
+            bn: খসখসে
+            hi: खुरदुरा
+      colour:
+        text:
+          bn: দাগের রং কেমন?
+          hi: दाने या चकत्ते का रंग कैसा है?
+        options: {}
+sections:
+  past-history:
+    title:
+      bn: আগের অসুখবিসুখ
+      hi: पहले की बीमारियाँ
+    questions:
+      known-conditions:
+        text:
+          bn: কোনো ডাক্তার কি কখনো বলেছেন যে আপনার এগুলোর মধ্যে কোনো অসুখ আছে?
+          hi: क्या किसी डॉक्टर ने कभी बताया है कि आपको इनमें से कोई बीमारी है?
+        options:
+          diabetes:
+            bn: ডায়াবেটিস (সুগার)
+            hi: डायबिटीज़ (शुगर)
+          hypertension:
+            bn: হাই প্রেশার
+            hi: हाई बीपी
+          heart-disease:
+            bn: হার্টের অসুখ
+            hi: दिल की बीमारी
+          asthma-copd:
+            bn: হাঁপানি বা ফুসফুসের অসুখ
+            hi: दमा या फेफड़ों की बीमारी
+          tuberculosis:
+            bn: যক্ষ্মা (টিবি)
+            hi: टीबी
+          thyroid:
+            bn: থাইরয়েডের সমস্যা
+            hi: थायराइड की समस्या
+          kidney:
+            bn: কিডনির অসুখ
+            hi: किडनी की बीमारी
+          epilepsy:
+            bn: মৃগী / খিঁচুনি
+            hi: मिर्गी / दौरे
+          other:
+            bn: অন্য কিছু
+            hi: कुछ और
+          none:
+            bn: কিছু না
+            hi: कुछ नहीं
+      daily-medicines:
+        text:
+          bn: আপনি কি রোজ কোনো ওষুধ খান?
+          hi: क्या आप रोज़ कोई दवा खाते हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+          dont-know:
+            bn: জানি না
+            hi: पता नहीं
+      allergies:
+        text:
+          bn: কোনো ওষুধ বা খাবারে কি আপনার অ্যালার্জি আছে?
+          hi: क्या आपको किसी दवा या खाने से एलर्जी है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+          dont-know:
+            bn: জানি না
+            hi: पता नहीं
+      operations-admissions:
+        text:
+          bn: আগে কি কখনো আপনার অপারেশন হয়েছে, বা হাসপাতালে ভর্তি হয়েছিলেন?
+          hi: क्या पहले कभी आपका ऑपरेशन हुआ है, या आप अस्पताल में भर्ती हुए हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      family-history:
+        text:
+          bn: আপনার পরিবারে কারো কি এগুলোর মধ্যে কোনো অসুখ আছে?
+          hi: क्या आपके परिवार में किसी को इनमें से कोई बीमारी है?
+        options:
+          diabetes:
+            bn: ডায়াবেটিস (সুগার)
+            hi: डायबिटीज़ (शुगर)
+          hypertension:
+            bn: হাই প্রেশার
+            hi: हाई बीपी
+          heart-disease:
+            bn: হার্টের অসুখ
+            hi: दिल की बीमारी
+          cancer:
+            bn: ক্যানসার
+            hi: कैंसर
+          tuberculosis:
+            bn: যক্ষ্মা (টিবি)
+            hi: टीबी
+          none:
+            bn: কিছু না / জানি না
+            hi: कुछ नहीं / पता नहीं
+      pregnant:
+        text:
+          bn: আপনি কি গর্ভবতী, বা হতে পারেন?
+          hi: क्या आप गर्भवती हैं, या हो सकती हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+          not-sure:
+            bn: ঠিক জানি না
+            hi: पक्का नहीं पता
+  personal-history:
+    title:
+      bn: ব্যক্তিগত তথ্য
+      hi: निजी जानकारी
+    questions:
+      gender-specific-testicular-or-scrotal-swelling:
+        text:
+          bn: অণ্ডকোষ বা তার থলিতে কি কোনো ফোলা আছে?
+          hi: क्या अंडकोष या उसकी थैली में सूजन है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      gender-specific-age-of-menarche:
+        text:
+          bn: প্রথম মাসিক কত বছর বয়সে হয়েছিল?
+          hi: पहली बार माहवारी कितनी उम्र में हुई थी?
+        options: {}
+      gender-specific-last-menstrual-period:
+        text:
+          bn: শেষ মাসিক কবে হয়েছিল?
+          hi: पिछली माहवारी कब हुई थी?
+        options: {}
+      gender-specific-cycle-length:
+        text:
+          bn: এক মাসিক থেকে পরের মাসিক কতদিন পরপর হয়?
+          hi: एक माहवारी से अगली माहवारी के बीच कितने दिन होते हैं?
+        options: {}
+      gender-specific-duration-of-bleeding:
+        text:
+          bn: মাসিকের সময় কতদিন রক্ত যায়?
+          hi: माहवारी में कितने दिन खून आता है?
+        options: {}
+      gender-specific-pads-per-day:
+        text:
+          bn: মাসিকের সময় দিনে কটা প্যাড বা কাপড় লাগে?
+          hi: माहवारी में दिन में कितने पैड या कपड़े बदलने पड़ते हैं?
+        options: {}
+      gender-specific-painful-periods:
+        text:
+          bn: মাসিকের সময় কি ব্যথা হয়?
+          hi: क्या माहवारी के समय दर्द होता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      gender-specific-premenstrual-symptoms:
+        text:
+          bn: মাসিক শুরুর আগে কি কোনো অসুবিধা হয় — যেমন পেট ফাঁপা, স্তনে ব্যথা বা মেজাজ খারাপ?
+          hi: क्या माहवारी शुरू होने से पहले कोई परेशानी होती है — जैसे पेट फूलना, स्तन में दर्द या चिड़चिड़ापन?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      gender-specific-excessive-bleeding:
+        text:
+          bn: মাসিকে কি খুব বেশি রক্ত যায়?
+          hi: क्या माहवारी में बहुत ज़्यादा खून आता है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      gender-specific-other-issues:
+        text:
+          bn: মাসিক বা মেয়েলি অন্য কোনো সমস্যা আছে কি?
+          hi: माहवारी या औरतों से जुड़ी कोई और परेशानी है?
+        options: {}
+      gender-specific-breast-lump-or-swelling:
+        text:
+          bn: স্তনে কি কোনো গুটি, চাকা বা ফোলা আছে?
+          hi: क्या स्तन में कोई गाँठ या सूजन है?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      sleep-average-hours-of-sleep-per-night:
+        text:
+          bn: রাতে সাধারণত কত ঘণ্টা ঘুমোন?
+          hi: रात में आम तौर पर कितने घंटे सोते हैं?
+        options: {}
+      diet-and-exercise-skipped-meals-frequently:
+        text:
+          bn: আপনি কি প্রায়ই খাওয়া বাদ দেন?
+          hi: क्या आप अक्सर खाना छोड़ देते हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      diet-and-exercise-do-you-consume-tea-coffee-immediately-after-meals:
+        text:
+          bn: খাওয়ার ঠিক পরেই কি চা বা কফি খান?
+          hi: क्या खाना खाने के तुरंत बाद चाय या कॉफ़ी पीते हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं
+      diet-and-exercise-do-you-exercise-regularly:
+        text:
+          bn: আপনি কি নিয়মিত ব্যায়াম করেন?
+          hi: क्या आप नियम से कसरत करते हैं?
+        options:
+          yes:
+            bn: হ্যাঁ
+            hi: हाँ
+          no:
+            bn: না
+            hi: नहीं

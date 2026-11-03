@@ -12,7 +12,7 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
-import { Bank, Codes, type Condition, RedFlagRule, Section, type Complaint, type Option } from "@setu/bank";
+import { Bank, Codes, type Condition, RedFlagRule, Section, type Complaint, type Option, type Question } from "@setu/bank";
 import { parse as parseYaml } from "yaml";
 import { z } from "zod";
 import { parseComplaints, type ComplaintCorrections } from "./complaints";
@@ -30,6 +30,7 @@ export const CONTENT_FILES = {
   codes: "codes.yaml",
   corrections: "corrections.yaml",
   groups: "groups.yaml",
+  translations: "translations.yaml",
 } as const;
 
 const CorrectionsFile = z.object({
@@ -42,7 +43,46 @@ const RedFlagsFile = z.object({
 });
 const CodesFile = z.object({ complaints: z.record(z.string(), Codes) });
 const GroupsFile = z.object({ order: z.array(z.string()) });
+const Tr = z.object({ bn: z.string().optional(), hi: z.string().optional() });
+const QuestionTr = z.object({ text: Tr.optional(), options: z.record(z.string(), Tr).default({}) });
+const TranslationsFile = z.object({
+  groups: z.record(z.string(), Tr).default({}),
+  complaints: z.record(z.string(), z.object({ name: Tr.optional(), questions: z.record(z.string(), QuestionTr).default({}) })).default({}),
+  sections: z.record(z.string(), z.object({ title: Tr.optional(), questions: z.record(z.string(), QuestionTr).default({}) })).default({}),
+});
+type TranslationsFile = z.infer<typeof TranslationsFile>;
+type QuestionTr = z.infer<typeof QuestionTr>;
+
 const OptionsFile = z.object({ options: z.record(z.string(), z.array(z.any())).default({}) });
+
+/**
+ * Adds Bengali and Hindi text from translations.yaml to questions and options, matched by id.
+ * Unknown ids are reported (usually a question was renamed in the sheet); missing text falls back to English.
+ */
+function applyQuestionTranslations(questions: Question[], tr: Record<string, QuestionTr>, where: string, diag: Diagnostics, owner?: string) {
+  for (const [qid, qtr] of Object.entries(tr)) {
+    const q = questions.find((x) => x.id === qid);
+    if (!q) {
+      diag.warn(`${CONTENT_FILES.translations} ${where}`, `Translation for unknown question "${qid}"; ignored.`, owner);
+      continue;
+    }
+    Object.assign(q.text, qtr.text);
+    for (const [oid, otr] of Object.entries(qtr.options)) {
+      const o = q.options.find((x) => x.id === oid);
+      if (!o) diag.warn(`${CONTENT_FILES.translations} ${where}`, `Translation for unknown answer "${oid}" in "${qid}"; ignored.`, owner);
+      else Object.assign(o.label, otr);
+    }
+  }
+}
+
+function countMissing(questions: Question[]): number {
+  let n = 0;
+  for (const q of questions) {
+    if (!q.text.bn || !q.text.hi) n++;
+    for (const o of q.options) if (!o.label.bn || !o.label.hi) n++;
+  }
+  return n;
+}
 
 export interface CompileResult {
   bank: Bank | undefined;
@@ -106,6 +146,11 @@ export async function compileBank(contentDir: string, now = new Date()): Promise
   const groupsFile = await loadYaml(contentDir, CONTENT_FILES.groups, GroupsFile, diag);
   const pastHistory = await loadYaml(contentDir, CONTENT_FILES.pastHistory, Section, diag);
   const optionsFile = await loadYaml(contentDir, CONTENT_FILES.personalHistoryOptions, OptionsFile, diag);
+  const translations: TranslationsFile = (await loadYaml(contentDir, CONTENT_FILES.translations, TranslationsFile, diag)) ?? {
+    groups: {},
+    complaints: {},
+    sections: {},
+  };
 
   // 1-2. Spreadsheets
   const complaintsWb = await readWorkbook(join(contentDir, CONTENT_FILES.complaints));
@@ -160,6 +205,28 @@ export async function compileBank(contentDir: string, now = new Date()): Promise
   for (const g of groups) if (!order.includes(g.id)) diag.warn(CONTENT_FILES.groups, `Group "${g.id}" is not listed in order; shown last.`);
   for (const id of order) if (!groups.some((g) => g.id === id)) diag.warn(CONTENT_FILES.groups, `Group "${id}" in order does not exist.`);
 
+  // 4b. Translations (draft until reviewed by native speakers)
+  for (const [id, ctr] of Object.entries(translations.complaints)) {
+    const c = complaints.find((x) => x.id === id);
+    if (!c) {
+      diag.warn(CONTENT_FILES.translations, `Translation for unknown complaint "${id}"; ignored.`);
+      continue;
+    }
+    Object.assign(c.name, ctr.name);
+    applyQuestionTranslations(c.questions, ctr.questions, `complaint ${id}`, diag, id);
+  }
+  const personalSection = { id: "personal-history", title: { en: "Personal history" } as Section["title"], questions: personalQuestions };
+  const pastSection = pastHistory ?? { id: "past-history", title: { en: "Past medical history" }, questions: [] };
+  for (const section of [pastSection, personalSection]) {
+    const str = translations.sections[section.id];
+    if (!str) continue;
+    Object.assign(section.title, str.title);
+    applyQuestionTranslations(section.questions, str.questions, `section ${section.id}`, diag);
+  }
+  const groupNames = new Map(groups.map((g) => [g.id, { en: g.name, ...translations.groups[g.id] }]));
+  const missing = complaints.reduce((n, c) => n + countMissing(c.questions), 0) + countMissing(pastSection.questions) + countMissing(personalSection.questions);
+  if (missing > 0) diag.warn(CONTENT_FILES.translations, `${missing} questions or answers have no Bengali or Hindi text yet; English is shown instead.`);
+
   // 5. Red flags
   for (const rule of redFlagsFile?.rules ?? []) {
     checkCondition(rule.when, complaints, `red-flags.yaml rule ${rule.id}`, diag);
@@ -173,10 +240,10 @@ export async function compileBank(contentDir: string, now = new Date()): Promise
   const candidate = {
     version: await hashFiles(contentDir),
     compiledAt: now.toISOString(),
-    groups: groups.map((g) => ({ id: g.id, name: { en: g.name }, complaintIds: g.complaintIds })),
+    groups: groups.map((g) => ({ id: g.id, name: groupNames.get(g.id)!, complaintIds: g.complaintIds })),
     complaints,
-    pastHistory: pastHistory ?? { id: "past-history", title: { en: "Past medical history" }, questions: [] },
-    personalHistory: { id: "personal-history", title: { en: "Personal history" }, questions: personalQuestions },
+    pastHistory: pastSection,
+    personalHistory: personalSection,
     redFlags: redFlagsFile?.rules ?? [],
     urgentComplaints: redFlagsFile?.urgentComplaints ?? [],
   };

@@ -1,18 +1,20 @@
 /**
- * One question. The question is read aloud and shown. The patient can:
+ * One question, shown as the next turn of a chat. Earlier questions and answers stay visible above.
+ * The question is read aloud (with a short intro when a new topic starts). The patient can:
  *  - tap an answer (or several, for "any associated symptoms?"), or
- *  - tap the microphone and speak; the server suggests an answer and the patient confirms it, or
- *  - say or tap "I don't know".
+ *  - tap the microphone and speak; the app reads back what it understood and the patient confirms, or
+ *  - tap "I don't know".
  * Nothing spoken is saved until the patient confirms what the app understood.
  */
-import { t, type Question } from "@setu/bank";
+import { t } from "@setu/bank";
 import type { Answer, Step } from "@setu/engine";
 import { useEffect, useRef, useState } from "react";
 import { api, type Interpretation } from "../api";
 import type { Ctx } from "../App";
+import { conversation, describeAnswer, introFor, progress, startsTopic } from "../conversation";
 import { ui } from "../i18n";
-import { startRecording, type Recording } from "../voice/record";
 import { clipKey, speak, stopSpeaking } from "../voice/speak";
+import { MicButton } from "./MicButton";
 
 type QuestionStep = Extract<Step, { type: "question" }>;
 
@@ -23,38 +25,42 @@ const UNITS = [
   { id: "years", days: 365 },
 ] as const;
 
-/** How a suggested answer reads back to the patient: "Severe", "3 days", "I don't know". */
-function describe(q: Question, a: Answer, ctx: Ctx): string {
-  if (a.skipped) return ui("dontKnow", ctx.lang);
-  if (a.optionIds) return a.optionIds.map((id) => t(q.options.find((o) => o.id === id)!.label, ctx.lang)).join(", ");
-  if (q.kind === "duration") return `${a.value} ${ui("days", ctx.lang)}`;
-  return String(a.value);
-}
+type Suggestion = Interpretation & { heard: string };
 
-export function QuestionScreen({ ctx, step }: { ctx: Ctx; step: QuestionStep }) {
-  const { lang, voice, session } = ctx;
+export function QuestionScreen({ ctx, step, onCancel }: { ctx: Ctx; step: QuestionStep; onCancel?: () => void }) {
+  const { bank, lang, voice, session } = ctx;
   const q = step.question;
   const text = t(q.text, lang);
+  const intro = !onCancel && startsTopic(session.state, step.scope) ? introFor(bank, step.scope, lang) : undefined;
   const [selected, setSelected] = useState<string[]>([]);
   const [details, setDetails] = useState<Record<string, string>>({});
   const [amount, setAmount] = useState("");
   const [unit, setUnit] = useState<(typeof UNITS)[number]>(UNITS[0]);
   const [freeText, setFreeText] = useState("");
-  const [recording, setRecording] = useState<Recording>();
-  const [suggestion, setSuggestion] = useState<Interpretation>();
+  const [suggestion, setSuggestion] = useState<Suggestion>();
+  const [notice, setNotice] = useState<string>();
   const [busy, setBusy] = useState(false);
   const spoken = useRef(false);
+  const current = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
+    current.current?.scrollIntoView({ block: "start" });
     if (spoken.current) return;
     spoken.current = true;
-    void speak(text, lang, voice, clipKey(step.scope, q.id));
+    void speak(intro ? `${intro} ${text}` : text, lang, voice, intro ? undefined : clipKey(step.scope, q.id));
     return () => stopSpeaking();
-  }, [text, lang, voice, step.scope, q.id]);
+  }, [intro, text, lang, voice, step.scope, q.id]);
+
+  useEffect(() => {
+    if (suggestion || notice) current.current?.scrollIntoView({ block: "start", behavior: "smooth" });
+  }, [suggestion, notice, selected]);
 
   const submit = (answer: Answer) => {
     setBusy(true);
-    return ctx.update(() => api.answer(session.id, step.scope, q.id, answer)).finally(() => setBusy(false));
+    return ctx
+      .update(() => api.answer(session.id, step.scope, q.id, answer))
+      .then(() => onCancel?.())
+      .finally(() => setBusy(false));
   };
 
   function pick(id: string) {
@@ -71,27 +77,20 @@ export function QuestionScreen({ ctx, step }: { ctx: Ctx; step: QuestionStep }) 
     });
   }
 
-  async function toggleMic() {
-    if (!recording) {
-      stopSpeaking();
-      setSuggestion(undefined);
-      try {
-        setRecording(await startRecording());
-      } catch {
-        setSuggestion({ method: "none" }); // no microphone permission: show the "please tap" message
-      }
+  async function heard(transcript: string) {
+    setNotice(undefined);
+    if (!transcript.trim()) {
+      setNotice(ui("notUnderstood", lang));
       return;
     }
     setBusy(true);
     try {
-      const audio = await recording.stop();
-      setRecording(undefined);
-      const { text: heard } = await api.transcribe(audio, lang);
-      const result = heard.trim() ? await api.interpret(session.id, step.scope, q.id, heard) : { method: "none" as const };
-      setSuggestion(result);
-      if (result.answer) void speak(`${ui("didYouMean", lang)} ${describe(q, result.answer, ctx)}`, lang, voice);
+      const result = await api.interpret(session.id, step.scope, q.id, transcript);
+      setSuggestion({ ...result, heard: transcript });
+      if (result.answer) void speak(`${ui("didYouMean", lang)} ${describeAnswer(q, result.answer, lang)}`, lang, voice);
+      else void speak(ui("notUnderstood", lang), lang, voice);
     } catch {
-      setSuggestion({ method: "none" });
+      setNotice(ui("notUnderstood", lang));
     } finally {
       setBusy(false);
     }
@@ -99,109 +98,139 @@ export function QuestionScreen({ ctx, step }: { ctx: Ctx; step: QuestionStep }) 
 
   const needsDetail = selected.filter((id) => q.options.find((o) => o.id === id)?.detail);
   const canSubmitChoice = selected.length > 0 && needsDetail.every((id) => details[id]?.trim());
+  const { answered, total } = progress(bank, session.state);
+  const history = onCancel ? [] : conversation(bank, session.state);
 
   return (
-    <main className="screen">
-      <h1 className="question">
-        {text}
-        <button className="icon" aria-label={ui("listen", lang)} onClick={() => speak(text, lang, voice, clipKey(step.scope, q.id))}>
-          🔊
-        </button>
-      </h1>
-
-      {suggestion?.answer ? (
-        <div className="suggestion">
-          <p>{ui("didYouMean", lang)}</p>
-          <p className="big">{describe(q, suggestion.answer, ctx)}</p>
-          <button className="primary" disabled={busy} onClick={() => submit(suggestion.answer!)}>
-            {ui("yesCorrect", lang)}
-          </button>
-          <button className="secondary" onClick={() => setSuggestion(undefined)}>
-            {ui("tryAgain", lang)}
-          </button>
+    <main className="screen chat">
+      {!onCancel && (
+        <div className="progress" aria-label={ui("progress", lang).replace("{n}", String(answered + 1)).replace("{total}", String(total))}>
+          <div className="bar" style={{ width: `${Math.round((answered / Math.max(total, 1)) * 100)}%` }} />
         </div>
-      ) : (
-        <>
-          {suggestion && <p className="hint warn">{ui("notUnderstood", lang)}</p>}
+      )}
 
-          {(q.kind === "single" || q.kind === "multi") && (
-            <>
-              {q.kind === "multi" && <p className="hint">{ui("chooseAll", lang)}</p>}
-              <div className="choices">
-                {q.options.map((o) => (
-                  <button key={o.id} className={`choice ${selected.includes(o.id) ? "selected" : ""}`} disabled={busy} onClick={() => pick(o.id)}>
-                    {t(o.label, lang)}
-                  </button>
-                ))}
-              </div>
-              {needsDetail.map((id) => (
-                <label key={id} className="field">
-                  <span>{q.options.find((o) => o.id === id)?.detail?.prompt ?? ui("describe", lang)}</span>
-                  <input value={details[id] ?? ""} onChange={(e) => setDetails((d) => ({ ...d, [id]: e.target.value }))} />
-                </label>
-              ))}
-              {(q.kind === "multi" || needsDetail.length > 0) && (
-                <button
-                  className="primary"
-                  disabled={!canSubmitChoice || busy}
-                  onClick={() => submit({ optionIds: selected, details: needsDetail.length ? details : undefined, source: "tap" })}
-                >
-                  {ui("next", lang)}
-                </button>
-              )}
-            </>
-          )}
+      <div className="thread">
+        {history.map((item, i) =>
+          item.kind === "intro" ? (
+            <p key={i} className="bubble bot intro">{item.text}</p>
+          ) : item.kind === "question" ? (
+            <p key={i} className="bubble bot">{item.text}</p>
+          ) : (
+            <p key={i} className="bubble me">{item.voice && "🎤 "}{item.text}</p>
+          ),
+        )}
+        {intro && <p className="bubble bot intro">{intro}</p>}
+        <p ref={current} className="bubble bot current">
+          {text}
+          <button className="icon" aria-label={ui("listen", lang)} onClick={() => speak(text, lang, voice, clipKey(step.scope, q.id))}>
+            🔊
+          </button>
+        </p>
+        {suggestion && <p className="bubble me heard">🎤 {suggestion.heard}</p>}
+        {suggestion?.answer && (
+          <div className="bubble bot suggestion">
+            <span>{ui("didYouMean", lang)}</span>
+            <strong>{describeAnswer(q, suggestion.answer, lang)}</strong>
+          </div>
+        )}
+        {suggestion && !suggestion.answer && <p className="bubble bot warn">{ui("notUnderstood", lang)}</p>}
+        {notice && <p className="bubble bot warn">{notice}</p>}
+      </div>
 
-          {(q.kind === "duration" || q.kind === "number") && (
-            <>
-              <input className="number" inputMode="numeric" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^\d.]/g, ""))} />
-              {q.kind === "duration" && (
-                <div className="choices row-wrap">
-                  {UNITS.map((u) => (
-                    <button key={u.id} className={`choice small ${unit.id === u.id ? "selected" : ""}`} onClick={() => setUnit(u)}>
-                      {ui(u.id, lang)}
+      <div className="answer-area">
+        {suggestion?.answer ? (
+          <div className="row">
+            <button className="primary grow" disabled={busy} onClick={() => submit(suggestion.answer!)}>
+              ✓ {ui("yesCorrect", lang)}
+            </button>
+            <button className="secondary" onClick={() => setSuggestion(undefined)}>
+              {ui("tryAgain", lang)}
+            </button>
+          </div>
+        ) : (
+          <>
+            {(q.kind === "single" || q.kind === "multi") && (
+              <>
+                {q.kind === "multi" && <p className="hint">{ui("chooseAll", lang)}</p>}
+                <div className={`choices ${q.options.length > 4 ? "two-col" : ""}`}>
+                  {q.options.map((o) => (
+                    <button key={o.id} className={`choice ${selected.includes(o.id) ? "selected" : ""}`} disabled={busy} onClick={() => pick(o.id)}>
+                      {t(o.label, lang)}
                     </button>
                   ))}
                 </div>
-              )}
-              <button
-                className="primary"
-                disabled={amount === "" || busy}
-                onClick={() => submit({ value: Number(amount) * (q.kind === "duration" ? unit.days : 1), source: "tap" })}
-              >
-                {ui("next", lang)}
-              </button>
-            </>
-          )}
+                {needsDetail.map((id) => (
+                  <label key={id} className="field">
+                    <span>{ui("describe", lang)}</span>
+                    <input autoFocus value={details[id] ?? ""} onChange={(e) => setDetails((d) => ({ ...d, [id]: e.target.value }))} />
+                  </label>
+                ))}
+                {(q.kind === "multi" || needsDetail.length > 0) && (
+                  <button
+                    className="primary"
+                    disabled={!canSubmitChoice || busy}
+                    onClick={() => submit({ optionIds: selected, details: needsDetail.length ? details : undefined, source: "tap" })}
+                  >
+                    {ui("next", lang)}
+                  </button>
+                )}
+              </>
+            )}
 
-          {q.kind === "date" && (
-            <>
-              <input type="date" className="number" value={freeText} onChange={(e) => setFreeText(e.target.value)} />
-              <button className="primary" disabled={!freeText || busy} onClick={() => submit({ value: freeText, source: "tap" })}>
-                {ui("next", lang)}
-              </button>
-            </>
-          )}
+            {(q.kind === "duration" || q.kind === "number") && (
+              <div className="row">
+                <input className="number" inputMode="numeric" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^\d.]/g, ""))} />
+                {q.kind === "duration" && (
+                  <select className="unit" value={unit.id} onChange={(e) => setUnit(UNITS.find((u) => u.id === e.target.value)!)}>
+                    {UNITS.map((u) => (
+                      <option key={u.id} value={u.id}>
+                        {ui(u.id, lang)}
+                      </option>
+                    ))}
+                  </select>
+                )}
+                <button
+                  className="primary"
+                  disabled={amount === "" || busy}
+                  onClick={() => submit({ value: Number(amount) * (q.kind === "duration" ? unit.days : 1), source: "tap" })}
+                >
+                  ➜
+                </button>
+              </div>
+            )}
 
-          {q.kind === "text" && (
-            <>
-              <textarea value={freeText} onChange={(e) => setFreeText(e.target.value)} rows={3} />
-              <button className="primary" disabled={!freeText.trim() || busy} onClick={() => submit({ value: freeText.trim(), source: "tap" })}>
-                {ui("next", lang)}
-              </button>
-            </>
-          )}
+            {q.kind === "date" && (
+              <div className="row">
+                <input type="date" className="grow" value={freeText} onChange={(e) => setFreeText(e.target.value)} />
+                <button className="primary" disabled={!freeText || busy} onClick={() => submit({ value: freeText, source: "tap" })}>
+                  ➜
+                </button>
+              </div>
+            )}
 
-          <div className="row bottom">
-            <button className={`mic ${recording ? "on" : ""}`} disabled={busy} onClick={toggleMic}>
-              🎤 {recording ? ui("stop", lang) : ui("speak", lang)}
-            </button>
-            <button className="secondary" disabled={busy} onClick={() => submit({ skipped: "dont_know", source: "tap" })}>
-              {ui("dontKnow", lang)}
-            </button>
-          </div>
-        </>
-      )}
+            {q.kind === "text" && (
+              <div className="row">
+                <input className="grow" value={freeText} onChange={(e) => setFreeText(e.target.value)} />
+                <button className="primary" disabled={!freeText.trim() || busy} onClick={() => submit({ value: freeText.trim(), source: "tap" })}>
+                  ➜
+                </button>
+              </div>
+            )}
+
+            <div className="row">
+              <MicButton lang={lang} disabled={busy} onHeard={heard} onUnavailable={() => setNotice(ui("micBlocked", lang))} />
+              <button className="secondary" disabled={busy} onClick={() => submit({ skipped: "dont_know", source: "tap" })}>
+                {ui("dontKnow", lang)}
+              </button>
+            </div>
+            {onCancel && (
+              <button className="secondary" onClick={onCancel}>
+                {ui("cancel", lang)}
+              </button>
+            )}
+          </>
+        )}
+      </div>
     </main>
   );
 }

@@ -1,7 +1,8 @@
 /**
  * Demo mode: the interview engine and question bank run inside the browser, with sessions kept in
  * memory on this device. Same functions as the server API, so the screens do not know the difference.
- * Voice answers need the speech service, so in the demo patients tap their answers.
+ * Spoken answers use the browser's speech recognition (voice/listen.ts) and the same rule-based
+ * matcher the server uses first (no LLM in the demo).
  * Never used for real patients.
  */
 import { Bank } from "@setu/bank";
@@ -11,6 +12,8 @@ import {
   buildSummary,
   chooseComplaints,
   confirm,
+  findQuestion,
+  matchAnswer,
   nextStep,
   renderSummaryText,
   startInterview,
@@ -61,7 +64,11 @@ export const demoApi: Api = {
       })),
   chooseComplaints: async (id, complaintIds) => apply(id, (s) => chooseComplaints(bank, s, complaintIds)),
   answer: async (id, scope, questionId, answer) => apply(id, (s) => answerQuestion(bank, s, scope, questionId, answer)),
-  interpret: async () => ({ method: "none" }),
+  interpret: async (id, scope, questionId, transcript) => {
+    const s = sessions.get(id);
+    if (!s) throw new ApiError(404, "Session not found");
+    return matchAnswer(findQuestion(bank, scope, questionId), transcript, s.state.lang);
+  },
   acknowledge: async (id, ruleId, by) => apply(id, (s) => acknowledgeRedFlag(s, ruleId, by)),
   confirm: async (id) => apply(id, (s) => confirm(bank, s)),
   summary: async (id) => {

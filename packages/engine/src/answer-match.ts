@@ -8,6 +8,7 @@
  * pilot transcripts.
  */
 import type { Lang, Option, Question } from "@setu/bank";
+import type { Answer } from "./state";
 
 /** Words for common option ids, by language. Option labels (and their translations) are always matched too. */
 export const OPTION_WORDS: Record<string, Partial<Record<Lang, string[]>>> = {
@@ -109,4 +110,37 @@ export function matchOptions(question: Question, transcript: string, lang: Lang)
   const exclusive = hits.filter((h) => question.options.find((o) => o.id === h)?.exclusive);
   if (exclusive.length > 0 && hits.length > exclusive.length) hits = hits.filter((h) => !exclusive.includes(h));
   return hits.length > 0 ? hits : undefined;
+}
+
+export interface AnswerMatch {
+  /** The suggested answer, or undefined when nothing could be understood. */
+  answer?: Answer;
+  method: "dont_know" | "number" | "synonym" | "none";
+}
+
+/**
+ * Rule-based reading of a spoken answer, with no AI: "I don't know", numbers and durations, option
+ * labels and synonyms. The server tries the local LLM only when this returns "none"; the in-browser
+ * demo uses this alone. The result is a suggestion the patient confirms before it is saved.
+ */
+export function matchAnswer(question: Question, transcript: string, lang: Lang): AnswerMatch {
+  const base = { source: "voice" as const, transcript };
+  if (isDontKnow(transcript, lang)) return { method: "dont_know", answer: { ...base, skipped: "dont_know", confidence: "high" } };
+
+  if (question.kind === "duration" || question.kind === "number") {
+    const n = question.kind === "duration" ? parseDurationDays(transcript) : parseNumber(transcript);
+    if (n !== undefined) return { method: "number", answer: { ...base, value: n, confidence: "high" } };
+  } else if (question.kind === "single" || question.kind === "multi") {
+    const ids = matchOptions(question, transcript, lang);
+    if (ids) return { method: "synonym", answer: { ...base, optionIds: ids, confidence: "high" } };
+    // A short answer that is part of exactly one label ("ডান" -> "ডান হাত") is a likely match.
+    const t = normalise(transcript);
+    if (t.length >= 2) {
+      const partial = question.options.filter((o) => [o.label.en, o.label[lang]].some((l) => l && ` ${normalise(l)} `.includes(` ${t} `)));
+      if (partial.length === 1) return { method: "synonym", answer: { ...base, optionIds: [partial[0]!.id], confidence: "medium" } };
+    }
+  } else if (question.kind === "text") {
+    return { method: "synonym", answer: { ...base, value: transcript.trim(), confidence: "high" } };
+  }
+  return { method: "none" };
 }

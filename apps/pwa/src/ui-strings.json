@@ -178,5 +178,65 @@
     "en": "Something went wrong. Please ask the staff.",
     "bn": "কিছু সমস্যা হয়েছে। কর্মীকে বলুন।",
     "hi": "कुछ गड़बड़ हुई। कृपया स्टाफ़ से कहें।"
+  },
+  "aboutComplaint": {
+    "en": "Now a few questions about your {name}.",
+    "bn": "এবার আপনার {name} নিয়ে কয়েকটি প্রশ্ন করব।",
+    "hi": "अब आपकी {name} के बारे में कुछ सवाल पूछूँगा।"
+  },
+  "pastIntro": {
+    "en": "Thank you. Now a few questions about your past health.",
+    "bn": "ধন্যবাদ। এবার আপনার আগের অসুখ-বিসুখ নিয়ে কয়েকটি প্রশ্ন।",
+    "hi": "धन्यवाद। अब आपकी पुरानी बीमारियों के बारे में कुछ सवाल।"
+  },
+  "personalIntro": {
+    "en": "Almost done. A few questions about your daily habits.",
+    "bn": "প্রায় শেষ। আপনার দৈনন্দিন অভ্যাস নিয়ে কয়েকটি প্রশ্ন।",
+    "hi": "लगभग हो गया। आपकी रोज़ की आदतों के बारे में कुछ सवाल।"
+  },
+  "progress": {
+    "en": "Question {n} of about {total}",
+    "bn": "প্রশ্ন {n} / প্রায় {total}",
+    "hi": "सवाल {n} / लगभग {total}"
+  },
+  "change": {
+    "en": "Change",
+    "bn": "বদলান",
+    "hi": "बदलें"
+  },
+  "cancel": {
+    "en": "Cancel",
+    "bn": "বাতিল",
+    "hi": "रद्द करें"
+  },
+  "speakNow": {
+    "en": "Speak now…",
+    "bn": "এখন বলুন…",
+    "hi": "अब बोलिए…"
+  },
+  "micBlocked": {
+    "en": "The microphone is not available here. Please allow microphone access, or tap your answer.",
+    "bn": "এখানে মাইক্রোফোন চালু নেই। মাইক্রোফোনের অনুমতি দিন, অথবা উত্তরে চাপ দিন।",
+    "hi": "यहाँ माइक्रोफ़ोन उपलब्ध नहीं है। माइक्रोफ़ोन की अनुमति दें, या जवाब पर दबाएँ।"
+  },
+  "youSaid": {
+    "en": "You said:",
+    "bn": "আপনি বললেন:",
+    "hi": "आपने कहा:"
+  },
+  "you": {
+    "en": "You",
+    "bn": "আপনি",
+    "hi": "आप"
+  },
+  "otherProblem": {
+    "en": "Other problem",
+    "bn": "অন্য সমস্যা",
+    "hi": "दूसरी परेशानी"
+  },
+  "sayProblem": {
+    "en": "You can also tap the mic and say your problem.",
+    "bn": "মাইকে চাপ দিয়ে আপনার সমস্যার কথা বলতেও পারেন।",
+    "hi": "माइक दबाकर अपनी परेशानी बोल भी सकते हैं।"
   }
 }
